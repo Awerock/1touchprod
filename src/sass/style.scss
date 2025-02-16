@@ -93,3 +93,31 @@ a {
 	max-width: 150px; /* Максимальная ширина логотипа */
 	height: auto;
 }
+
+@media (max-width: 1258px) {
+	.title {
+		font-size: 100px;
+	}
+}
+
+@media (max-width: 1050px) {
+	.title {
+		font-size: 120px;
+	}
+}
+
+@media (max-width: 690px) {
+	.title {
+		font-size: 90px;
+	}
+}
+
+@media (max-width: 520px) {
+	.title {
+		font-size: 60px;
+		line-height: 75px; /* 91.667% */
+		letter-spacing: -1.8px;
+		margin-bottom: 100px;
+		text-align: center;
+	}
+}
