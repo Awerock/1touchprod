@@ -1,0 +1,25 @@
+.button {
+	width: 328px;
+	height: 52px;
+	flex-shrink: 0;
+	border-radius: 27px;
+	background: $second-color;
+	color: #fff;
+	text-align: center;
+	font-family: 'TT Interphases Pro Trl', sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	border: none;
+	cursor: pointer;
+	outline: 2px solid transparent;
+	outline-offset: 0px;
+	transition: background 0.1s ease-in-out, outline-offset 0.1s ease-in-out,
+		outline-color 0.1s ease-in-out;
+	&:hover {
+		background: #db3e4e;
+		outline-color: white; /* Делаем обводку видимой */
+		outline-offset: 5px;
+	}
+}

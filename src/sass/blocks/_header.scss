@@ -1,0 +1,50 @@
+.header {
+	position: absolute; /* Убираем фиксированное положение */
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 1920px;
+	z-index: 10;
+	padding: 50px 65px 0 65px;
+	&__wrapper {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+	&__logo {
+		display: flex;
+	}
+	&__img {
+		width: 138.75px;
+	}
+	&__nav {
+		display: flex;
+		width: 723px;
+		height: 54px;
+		padding: 16px 34px;
+		justify-content: space-between;
+		align-items: center;
+		flex-shrink: 0;
+		border-radius: 44px;
+		background: rgba(224, 224, 224, 0.25);
+		backdrop-filter: blur(2px);
+		margin-left: 190px;
+	}
+	&__link {
+		text-transform: capitalize;
+		color: $white-color;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: -1.44px;
+	}
+	&__dropdown {
+		cursor: pointer;
+		display: flex;
+		align-items: baseline;
+		gap: 10px; /* Расстояние между текстом и SVG */
+	}
+}

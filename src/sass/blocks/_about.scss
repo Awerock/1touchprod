@@ -1,0 +1,81 @@
+.about {
+	min-height: 1045px;
+	background-color: $second-color;
+	background-image: url('../img/bg_abstract.png'); /* Путь к изображению */
+	background-size: cover; /* Растягивает изображение на всю секцию */
+	background-repeat: no-repeat; /* Запрещает повторение */
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 70px 250px;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&__right {
+		display: flex;
+		gap: 40px;
+	}
+	&__caption-block {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		max-width: 300px;
+		gap: 10px;
+	}
+	&__caption {
+		text-align: right;
+	}
+	&__globe {
+		margin-top: 71px;
+		position: relative; /* Устанавливаем контейнер с глобусом в качестве относительного */
+		overflow: hidden; /* Скрываем часть изображения, которая выходит за пределы */
+		width: 495px; /* Ширина контейнера */
+		height: 180px; /* Установим высоту контейнера для глобуса */
+	}
+	&__globe-img {
+		position: absolute; /* Позволяет контролировать положение изображения */
+		top: 20%; /* Сдвигаем изображение вверх, скрывая его верхнюю часть */
+		left: 50%; /* Размещаем изображение по центру */
+		transform: translateX(
+			-50%
+		); /* Сдвигаем изображение на 50% его ширины влево для центрирования */
+		width: 75%; /* Ширина изображения глобуса */
+		height: auto; /* Сохраняем пропорции изображения */
+	}
+	&__devider {
+		position: absolute; /* Разделитель также позиционируется относительно контейнера */
+		bottom: 0; /* Размещаем разделитель снизу */
+		left: 0;
+		width: 100%; /* Ширина разделителя на всю ширину контейнера */
+		height: 2px; /* Высота разделителя */
+		background-color: #000000;
+	}
+	&__subtitle {
+		flex-direction: column;
+		display: flex;
+		justify-content: space-between;
+		max-height: 540px;
+		align-items: flex-end;
+		&--margin {
+			margin-top: 35px;
+		}
+	}
+	&__description {
+		max-width: 620px;
+	}
+	&__partners-wrapper {
+		max-width: 510px;
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr); /* 4 элемента на первой строке */
+		grid-gap: 10px; /* Отступы между элементами */
+		justify-items: center; /* Центрирование элементов по горизонтали */
+		align-items: center;
+	}
+}

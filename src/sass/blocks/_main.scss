@@ -1,0 +1,18 @@
+.main {
+	min-height: 1007px;
+	background-image: url('../img/bg_header.png'); /* Путь к изображению */
+	background-size: cover; /* Растягивает изображение на всю секцию */
+	background-repeat: no-repeat; /* Запрещает повторение */
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 145px;
+	padding-left: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	&__title {
+		display: block;
+		margin: 0;
+	}
+}
