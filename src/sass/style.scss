@@ -64,6 +64,7 @@ a {
 	font-weight: 400;
 	line-height: 40px; /* 100% */
 	letter-spacing: -1.6px;
+	text-transform: capitalize;
 	&--black-mini {
 		color: #292828;
 		font-family: 'TT Interphases Pro Mono Trl';
@@ -94,9 +95,26 @@ a {
 	height: auto;
 }
 
+@media (max-width: 1450px) {
+	.descrition {
+		font-size: 19px;
+	}
+}
+
 @media (max-width: 1258px) {
 	.title {
 		font-size: 100px;
+	}
+}
+
+@media (max-width: 1230px) {
+	.descrition {
+		font-size: 28px;
+		text-align: justify;
+	}
+	.caption {
+		font-size: 56px;
+		line-height: 77px;
 	}
 }
 
@@ -106,18 +124,42 @@ a {
 	}
 }
 
-@media (max-width: 690px) {
+@media (max-width: 1050px) {
 	.title {
-		font-size: 90px;
+		font-size: 120px;
 	}
 }
 
-@media (max-width: 520px) {
+@media (max-width: 700px) {
+	.title {
+		font-size: 100px;
+	}
+}
+
+@media (max-width: 580px) {
 	.title {
 		font-size: 60px;
 		line-height: 75px; /* 91.667% */
 		letter-spacing: -1.8px;
 		margin-bottom: 100px;
 		text-align: center;
+	}
+	.partners-img {
+		width: 80%; /* Логотипы будут занимать всю ширину своих ячеек */
+	}
+	.caption {
+		font-size: 50px;
+		line-height: 67px;
+	}
+}
+
+@media (max-width: 460px) {
+	.subtitle {
+		text-align: center;
+		font-size: 35px;
+	}
+	.caption {
+		font-size: 40px;
+		line-height: 47px;
 	}
 }
