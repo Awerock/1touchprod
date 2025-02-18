@@ -50,3 +50,14 @@
 	font-weight: 200;
 	font-style: normal;
 }
+
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face {
+	font-family: 'TT Interphases Pro Trl Th It';
+	src: url('TT_Interphases_Pro_Trial_Thin_Italic.eot') format('eot'),
+		url('TT_Interphases_Pro_Trial_Thin_Italic.woff') format('woff'),
+		url('TT_Interphases_Pro_Trial_Thin_Italic.ttf') format('truetype'),
+		url('TT_Interphases_Pro_Trial_Thin_Italic.svg') format('svg');
+	font-weight: 100;
+	font-style: italic;
+}

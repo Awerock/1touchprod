@@ -4,6 +4,8 @@
 @import 'blocks/header';
 @import 'blocks/main';
 @import 'blocks/about';
+@import 'blocks/planet';
+@import 'blocks/live';
 
 * {
 	font-family: 'Roboto', sans-serif;
@@ -39,6 +41,9 @@ a {
 	&--red {
 		color: $second-color;
 	}
+	&--live {
+		font-size: 200px;
+	}
 }
 .caption {
 	color: #fff;
@@ -51,13 +56,14 @@ a {
 	text-transform: uppercase;
 	&--black {
 		color: #000000;
-		font-weight: 900;
+	}
+	&--live {
+		letter-spacing: -1.2px;
 	}
 }
 
 .subtitle {
 	color: #fff;
-	text-align: right;
 	font-family: 'TT Interphases Pro Mono Trl';
 	font-size: 40px;
 	font-style: normal;
@@ -74,6 +80,19 @@ a {
 		line-height: normal;
 		letter-spacing: -1.76px;
 	}
+	&--live {
+		fill: #fff;
+		font-size: 20px;
+		line-height: 30px;
+		letter-spacing: -0.4px;
+		dominant-baseline: middle;
+	}
+	&--black {
+		color: #000;
+	}
+	&--margin {
+		margin-left: 180px;
+	}
 }
 
 .descrition {
@@ -86,6 +105,52 @@ a {
 	line-height: 30px; /* 107.143% */
 	&-b {
 		font-weight: 400;
+	}
+	&--live {
+		color: #2e2a46;
+		letter-spacing: 0.56px;
+		text-shadow: none;
+	}
+}
+
+.bubble {
+	position: absolute;
+	color: #2e2a46;
+	font-family: 'TT Interphases Pro Trl';
+	font-size: 20px;
+	text-align: center;
+	align-content: center;
+	font-style: italic;
+	letter-spacing: -1.71px;
+	text-transform: uppercase;
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
+	background-color: #e5c1c5;
+	&--orange {
+		background-color: #e5c1c5;
+		top: 47.7px;
+		right: 603.4px;
+	}
+	&--viollet {
+		background-color: #dfd0df;
+		top: 187.7px;
+		right: 392.4px;
+	}
+	&--darkviollet {
+		background-color: #c6c4d5;
+		top: 89.7px;
+		right: 117.4px;
+	}
+	&--blue {
+		background-color: #b7c4e9;
+		top: 372px;
+		right: 193.4px;
+	}
+	&--pink {
+		background-color: #e6c4d1;
+		top: 266.7px;
+		right: -66.6px;
 	}
 }
 

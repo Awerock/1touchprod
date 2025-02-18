@@ -1,0 +1,130 @@
+.planet-wrapper {
+	position: absolute;
+	top: 266.7px;
+	right: 1075.4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.planet-logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+
+		svg {
+			width: 100px;
+			height: auto;
+		}
+	}
+
+	.orbit-one,
+	.orbit-two,
+	.orbit-three {
+		position: absolute;
+		border-radius: 50%;
+	}
+
+	.orbit-one {
+		width: 170px;
+		height: 170px;
+		border: 1px solid #b9b9be;
+	}
+
+	.orbit-two {
+		width: 220px;
+		height: 220px;
+		border: 1px solid #797688;
+	}
+
+	.orbit-three {
+		width: 300px;
+		height: 300px;
+		border: 1px solid #2e2a46;
+	}
+
+	.planet-one,
+	.planet-two,
+	.planet-three,
+	.planet-three-two,
+	.planet-three-three {
+		position: absolute;
+		border-radius: 50%;
+		top: 50%;
+		left: 50%;
+	}
+
+	.planet-one {
+		background: #b9b9be;
+		width: 18px;
+		height: 18px;
+		animation: movePlanet-one 25s linear infinite;
+		transform: translate(-50%, -50%) rotate(37deg) translateX(85px)
+			rotate(-171deg);
+	}
+
+	.planet-two {
+		background: #797688;
+		width: 24px;
+		height: 24px;
+		transform: translate(-50%, -50%) rotate(134deg) translateX(110px)
+			rotate(-171deg);
+	}
+
+	.planet-three {
+		background: #2e2a46;
+		width: 30px;
+		height: 30px;
+		animation: movePlanet-three 200s linear infinite;
+		transform: translate(-50%, -50%) rotate(317deg) translateX(150px)
+			rotate(-171deg);
+	}
+
+	.planet-three-two {
+		background: #2e2a46;
+		width: 24px;
+		height: 24px;
+		animation: movePlanet-three-two 200s linear infinite;
+		transform: translate(-50%, -50%) rotate(232deg) translateX(150px)
+			rotate(-171deg);
+	}
+
+	.planet-three-three {
+		background: #e0e0e0;
+		border: solid 1px #2e2a46;
+		width: 35px;
+		height: 35px;
+		transform: translate(-50%, -50%) rotate(132deg) translateX(150px)
+			rotate(-171deg);
+	}
+}
+
+@keyframes movePlanet-three {
+	0% {
+		transform: translate(-50%, -50%) rotate(232deg) translateX(150px);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(592deg) translateX(150px); /* 360 + 232 = 592, чтобы вернуться в начальную точку */
+	}
+}
+
+/* Анимация для второй планеты с другим стартовым углом */
+@keyframes movePlanet-three-two {
+	0% {
+		transform: translate(-50%, -50%) rotate(317deg) translateX(150px);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(677deg) translateX(150px); /* 360 + 317 = 677, чтобы вернуться в начальную точку */
+	}
+}
+
+/* Анимация для третьей планеты с еще другим углом */
+@keyframes movePlanet-one {
+	0% {
+		transform: translate(-50%, -50%) rotate(37deg) translateX(85px); /* Начало с другого угла */
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(397deg) translateX(85px); /* 360 + 37 = 397, чтобы вернуться в начальную точку */
+	}
+}

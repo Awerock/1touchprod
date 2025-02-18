@@ -1,0 +1,64 @@
+.live {
+	min-height: 1491px;
+	background-color: #e0e0e0;
+	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
+	&__description-block {
+		position: absolute;
+		top: 177.7px;
+		right: 221.4px;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		max-width: 618px;
+	}
+	&__service-block {
+		position: absolute;
+		top: 35%;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+	&__bubble-block {
+		position: absolute;
+		width: 980px;
+		top: 697.7px;
+		right: 257.4px;
+	}
+	&__caption {
+		color: #2e2a46;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 57px;
+		font-style: italic;
+		font-weight: 100;
+		line-height: 40px; /* 70.175% */
+		letter-spacing: 0;
+		text-transform: uppercase;
+		&-bubble {
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				background: #e0e0e0;
+				border: solid 1px #2e2a46;
+				border-radius: 100%;
+				vertical-align: super;
+			}
+		}
+		&-blok {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			text-align: center;
+		}
+		&-margin {
+			margin-left: 188px;
+		}
+	}
+	&-blok {
+		display: flex;
+		flex-direction: column;
+	}
+}
