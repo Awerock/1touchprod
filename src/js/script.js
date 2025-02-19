@@ -49,3 +49,35 @@ document.addEventListener('mousemove', event => {
 
 	planet.style.transform = `translate(-50%, -50%) rotate(${angleDeg}deg) translateX(110px) rotate(-171deg)`
 })
+
+const planetThreeThree = document.querySelector('.planet-three-three')
+const liveCaptionBubble = document.querySelector('.live__caption-bubble')
+const line = document.querySelector('.line')
+const orbitThree = document.querySelector('.orbit-three')
+
+function updateLine() {
+	const x1 = liveCaptionBubble.offsetLeft + liveCaptionBubble.offsetWidth / 2
+	const y1 = liveCaptionBubble.offsetTop + liveCaptionBubble.offsetHeight / 2 // Центр красного шарика
+
+	const rect = planetThreeThree.getBoundingClientRect()
+	const parentRect = orbitThree.getBoundingClientRect()
+	const x2 = rect.left + planetThreeThree.offsetWidth / 2 - parentRect.left
+	const y2 = rect.top + planetThreeThree.offsetHeight / 2 - parentRect.top // Центр синего шарика
+
+	const dx = x2 - x1
+	const dy = y2 - y1
+	const distance = Math.sqrt(dx * dx + dy * dy)
+	const angleDeg = (Math.atan2(dy, dx) * 180) / Math.PI
+
+	line.style.width = `${distance}px`
+	line.style.transform = `rotate(${angleDeg}deg)`
+	line.style.left = `${x1}px`
+	line.style.top = `${y1}px`
+}
+
+function animate() {
+	updateLine()
+	requestAnimationFrame(animate)
+}
+
+animate()

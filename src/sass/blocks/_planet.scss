@@ -1,7 +1,7 @@
 .planet-wrapper {
 	position: absolute;
-	top: 266.7px;
-	right: 1075.4px;
+	top: 66.7px;
+	right: 927.4px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -41,7 +41,9 @@
 	.orbit-three {
 		width: 300px;
 		height: 300px;
+		position: relative;
 		border: 1px solid #2e2a46;
+		margin: 50px auto;
 	}
 
 	.planet-one,
@@ -91,12 +93,15 @@
 	}
 
 	.planet-three-three {
+		z-index: 5;
 		background: #e0e0e0;
 		border: solid 1px #2e2a46;
 		width: 35px;
 		height: 35px;
-		transform: translate(-50%, -50%) rotate(132deg) translateX(150px)
-			rotate(-171deg);
+		top: 50%;
+		left: 50%;
+		animation: movePlanet-three-three 50s infinite linear;
+		transform: translate(-50%, -50%);
 	}
 }
 
@@ -126,5 +131,17 @@
 	}
 	100% {
 		transform: translate(-50%, -50%) rotate(397deg) translateX(85px); /* 360 + 37 = 397, чтобы вернуться в начальную точку */
+	}
+}
+
+@keyframes movePlanet-three-three {
+	0% {
+		transform: translate(-50%, -50%) rotate(145deg) translateX(150px);
+	}
+	50% {
+		transform: translate(-50%, -50%) rotate(25deg) translateX(150px);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(145deg) translateX(150px);
 	}
 }
