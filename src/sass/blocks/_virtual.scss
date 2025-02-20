@@ -1,29 +1,48 @@
 .virtual {
 	max-width: 1920px;
-	min-height: 1985px;
+	min-height: 2388px;
 	margin: -444px auto 0;
 	position: relative;
 	overflow: hidden;
-	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1621" height="1991" viewBox="0 0 1621 1991" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M749.966 1790.76L1433.64 1457.78V1457.78L1620.64 1367.4V1497.15C1620.64 1535.49 1607.68 1572.42 1572.2 1590.03L784.63 1980.86C766.385 1989.92 746.53 1992.13 727.98 1988.47C717.667 1987.35 707.373 1984.42 697.538 1979.54L-90.5691 1588.44C-125.191 1571.26 -140.506 1540.49 -140.506 1498.6V493.867C-140.506 457.492 -124.031 424.526 -90.8029 407.78L694.873 11.816C704.16 7.13562 719.875 0.000488367 737.875 8.60985e-08C755.875 -0.000488195 761.299 2.07568 779.128 11.0609L1566.25 407.752C1573.56 410.838 1586.54 419.706 1586.54 419.706C1609.72 437.881 1620.64 470.492 1620.64 501.604V1076.5H1433.64V542.628L745.206 201.876L53.2084 544.426V1451.29L749.966 1790.76Z" fill="%23527AFF"/></svg>')
-		no-repeat;
-	&:before {
-		content: '';
+	z-index: 2;
+	&__bckg {
+		max-height: 2388px;
 		position: absolute;
-		inset: 0;
-		background: url('../img/bg__virtual.png') lightgray 50% center / cover
-			no-repeat;
-		-webkit-mask-image: url('../img/mask-shape.png');
-		mask-image: url('../img/mask-shape.png');
-		-webkit-mask-size: cover;
-		mask-size: cover;
-		z-index: -1;
-		transform: translateY(200px); /* Move the image and mask 100px down */
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		pointer-events: none; /* Если фон не должен быть интерактивным */
 	}
 	&__bg-img {
 		position: absolute;
+		top: 91px;
 		z-index: -2;
-		transform: translateY(-130px);
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		object-fit: cover;
+		-webkit-mask-image: url(../img/mask-shape.png);
+		mask-image: url(../img/mask-shape.png);
+		-webkit-mask-size: contain;
+		mask-size: contain;
+		-webkit-mask-position: center;
+		mask-position: center;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
 	}
+	&__bg-svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 84.4%;
+		z-index: -1;
+	}
+
 	&__head {
 		display: flex;
 		flex-direction: column;

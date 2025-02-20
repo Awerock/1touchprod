@@ -7,6 +7,9 @@
 @import 'blocks/planet';
 @import 'blocks/live';
 @import 'blocks/virtual';
+@import 'blocks/degree';
+@import 'blocks/glasses';
+@import 'blocks/remote';
 
 body {
 	background-color: #e0e0e0;
@@ -55,6 +58,14 @@ a {
 		line-height: 140px; /* 70% */
 		letter-spacing: -4px;
 	}
+	&--degree {
+		color: #c472ed;
+		font-size: 200px;
+		line-height: 140px; /* 70% */
+		letter-spacing: -14px;
+		position: relative;
+		z-index: 4;
+	}
 }
 .caption {
 	color: #fff;
@@ -85,6 +96,15 @@ a {
 		color: #e0e0e0;
 		line-height: 36px;
 		letter-spacing: -1.2px;
+	}
+	&--degree {
+		color: #211d38;
+		font-weight: 900;
+		line-height: 36px;
+		letter-spacing: -3.4px;
+	}
+	&--viol {
+		color: #66386f;
 	}
 }
 
@@ -128,6 +148,10 @@ a {
 	}
 	&--margin {
 		margin-left: 180px;
+	}
+	&--degree {
+		width: fit-content;
+		background-color: #e0e0e0;
 	}
 }
 

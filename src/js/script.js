@@ -83,3 +83,23 @@ function animate() {
 }
 
 animate()
+
+window.addEventListener('scroll', function () {
+	const targetSection = document.getElementById('degree')
+	const movingBlock = document.getElementById('glasses')
+	const movingPole = document.getElementById('pole')
+	const rect = targetSection.getBoundingClientRect()
+	const windowHeight = window.innerHeight
+
+	// Check if the target section is in the viewport
+	if (rect.top <= windowHeight && rect.bottom >= 0) {
+		// Calculate the scroll percentage within the target section
+		const scrollPercentage =
+			(windowHeight - rect.top) / (windowHeight + rect.height)
+		// Calculate the new top position of the moving block (from 435px to 735px)
+		const newTopPositionForGlass = 435 + 300 * scrollPercentage
+		movingBlock.style.top = `${newTopPositionForGlass}px`
+		const newTopPositionForPole = 330 - 280 * scrollPercentage
+		movingPole.style.top = `${newTopPositionForPole}px`
+	}
+})

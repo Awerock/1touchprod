@@ -1,0 +1,108 @@
+.degree {
+	position: relative;
+	min-height: 2037px;
+	max-width: 1920px;
+	margin: -356px auto 0;
+	background: url('../img/bg_deg.png'); /* Путь к изображению */
+	background-size: cover; /* Растягивает изображение на всю секцию */
+	background-repeat: no-repeat;
+	padding-top: 162px;
+	&__right {
+		position: relative;
+		z-index: 10;
+		max-width: 618px;
+		margin-top: 650px;
+	}
+	&__content {
+		position: relative;
+		margin-top: 200px;
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+		z-index: 1;
+	}
+	&__left {
+		display: flex;
+		flex-direction: column;
+		max-width: 618px;
+		margin-top: 650px;
+	}
+	&__caption {
+		max-width: 253px;
+		color: #e0e0e0;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 57px;
+		font-style: italic;
+		font-weight: 100;
+		line-height: 68.158px; /* 119.575% */
+		letter-spacing: -1.71px;
+		margin-top: 65px;
+		& span {
+			text-transform: lowercase;
+		}
+	}
+	&__subtitle {
+		max-width: 618px;
+		color: #211d38;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 25px; /* 125% */
+		text-transform: uppercase;
+		width: 100%;
+		background-color: #e0e0e0;
+		margin-top: 20px;
+		outline: solid 20px #e0e0e0;
+	}
+	&__bg {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 1554.539px;
+		height: 854.633px;
+		&-img {
+			width: 100%;
+		}
+	}
+}
+
+.degree__chees-wrapper {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	bottom: 0;
+	left: 54.8%;
+	transform: translateX(-50%);
+}
+
+.degree__chees-row1,
+.degree__chees-row2 {
+	display: flex;
+}
+
+.degree__chees-row2 {
+	margin-left: 164px;
+}
+
+.degree__chees-item {
+	display: flex;
+	justify-content: center; /* Горизонтальное выравнивание */
+	align-items: center;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	background-color: #c472ed;
+	transform: skewX(-10deg);
+	border: solid 1px #e0e0e0;
+	color: #e0e0e0;
+	font-family: 'TT Interphases Pro Mono Trl';
+	font-size: 25px;
+	font-weight: 400;
+	letter-spacing: 0.25px;
+	text-transform: uppercase;
+	&-white {
+		background-color: #e0e0e0;
+		color: #c472ed;
+	}
+}
