@@ -1,0 +1,135 @@
+.virtual {
+	max-width: 1920px;
+	min-height: 1985px;
+	margin: -444px auto 0;
+	position: relative;
+	overflow: hidden;
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1621" height="1991" viewBox="0 0 1621 1991" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M749.966 1790.76L1433.64 1457.78V1457.78L1620.64 1367.4V1497.15C1620.64 1535.49 1607.68 1572.42 1572.2 1590.03L784.63 1980.86C766.385 1989.92 746.53 1992.13 727.98 1988.47C717.667 1987.35 707.373 1984.42 697.538 1979.54L-90.5691 1588.44C-125.191 1571.26 -140.506 1540.49 -140.506 1498.6V493.867C-140.506 457.492 -124.031 424.526 -90.8029 407.78L694.873 11.816C704.16 7.13562 719.875 0.000488367 737.875 8.60985e-08C755.875 -0.000488195 761.299 2.07568 779.128 11.0609L1566.25 407.752C1573.56 410.838 1586.54 419.706 1586.54 419.706C1609.72 437.881 1620.64 470.492 1620.64 501.604V1076.5H1433.64V542.628L745.206 201.876L53.2084 544.426V1451.29L749.966 1790.76Z" fill="%23527AFF"/></svg>')
+		no-repeat;
+	&:before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: url('../img/bg__virtual.png') lightgray 50% center / cover
+			no-repeat;
+		-webkit-mask-image: url('../img/mask-shape.png');
+		mask-image: url('../img/mask-shape.png');
+		-webkit-mask-size: cover;
+		mask-size: cover;
+		z-index: -1;
+		transform: translateY(200px); /* Move the image and mask 100px down */
+	}
+	&__bg-img {
+		position: absolute;
+		z-index: -2;
+		transform: translateY(-130px);
+	}
+	&__head {
+		display: flex;
+		flex-direction: column;
+		max-width: 1400px;
+		margin-top: 237px;
+	}
+	&__logo {
+		margin: 0 auto;
+		transform: translateX(25px);
+	}
+	&__content-wrapper {
+		margin-top: 50px;
+		display: flex;
+		padding: 0 175px;
+		justify-content: space-between;
+	}
+	&__left {
+		max-width: 618px;
+	}
+	&__right {
+		margin-top: 170px;
+		max-width: 618px;
+	}
+	&__bubble {
+		position: absolute;
+		display: flex;
+		padding: 28px;
+		text-align: center;
+		align-items: center;
+		width: 190px;
+		height: 190px;
+		border-radius: 100%;
+		background-color: #5892ff;
+		color: #e0e0e0;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 200;
+		line-height: 23px;
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		&-pos1 {
+			top: -22px;
+			left: 164px;
+		}
+		&-pos2 {
+			top: 127px;
+			left: -66px;
+		}
+		&-block {
+			position: relative;
+			width: 100%;
+			height: 315px;
+		}
+	}
+	&__service-block {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		position: absolute;
+		right: 0;
+		height: 125px;
+		margin-top: 30px;
+	}
+	&__subtitle {
+		fill: #fff;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 28px; /* 140% */
+		letter-spacing: -0.4px;
+		dominant-baseline: middle;
+	}
+	&__caption {
+		margin-top: 39px;
+		color: #e0e0e0;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 57px;
+		font-style: italic;
+		font-weight: 100;
+		line-height: 57px; /* 100% */
+		letter-spacing: -1.71px;
+	}
+	&__advance-blok {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		left: 0;
+	}
+	&__advance-item {
+		padding-left: 200px;
+		width: 578px;
+		height: 34px;
+		background: #e0e0e0;
+		color: #527aff;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 20px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: 33px;
+		letter-spacing: -0.4px;
+		&--blue {
+			color: #e0e0e0;
+			background: #527aff;
+		}
+	}
+}

@@ -21,7 +21,8 @@
 
 	.orbit-one,
 	.orbit-two,
-	.orbit-three {
+	.orbit-three,
+	.orbit-four {
 		position: absolute;
 		border-radius: 50%;
 	}
@@ -46,11 +47,18 @@
 		margin: 50px auto;
 	}
 
+	.orbit-four {
+		width: 1970px;
+		height: 1970px;
+		border: 1px solid #b9b9be;
+	}
+
 	.planet-one,
 	.planet-two,
 	.planet-three,
 	.planet-three-two,
-	.planet-three-three {
+	.planet-three-three,
+	.planet-four {
 		position: absolute;
 		border-radius: 50%;
 		top: 50%;
@@ -103,6 +111,14 @@
 		animation: movePlanet-three-three 50s infinite linear;
 		transform: translate(-50%, -50%);
 	}
+
+	.planet-four {
+		width: 64px;
+		height: 64px;
+		animation: movePlanet-four 200s linear infinite;
+		transform: translate(-50%, -50%) rotate(37deg) translateX(985px)
+			rotate(-171deg);
+	}
 }
 
 @keyframes movePlanet-three {
@@ -143,5 +159,17 @@
 	}
 	100% {
 		transform: translate(-50%, -50%) rotate(145deg) translateX(150px);
+	}
+}
+
+@keyframes movePlanet-four {
+	0% {
+		transform: translate(-50%, -50%) rotate(145deg) translateX(985px);
+	}
+	50% {
+		transform: translate(-50%, -50%) rotate(25deg) translateX(985px);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(145deg) translateX(985px);
 	}
 }

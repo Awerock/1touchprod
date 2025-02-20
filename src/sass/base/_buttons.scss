@@ -24,6 +24,22 @@
 	}
 }
 
+.button-other {
+	margin-top: 250px;
+	display: block;
+	width: 328px;
+	padding: 10px 60px;
+	align-items: center;
+	border-radius: 100px;
+	background: #f94658;
+	color: #fff;
+	text-align: center;
+	font-family: 'TT Interphases Pro Mono Trl';
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 200;
+}
+
 @media (max-width: 1540px) {
 	.button {
 		width: 228px;

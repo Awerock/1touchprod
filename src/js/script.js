@@ -50,6 +50,8 @@ document.addEventListener('mousemove', event => {
 	planet.style.transform = `translate(-50%, -50%) rotate(${angleDeg}deg) translateX(110px) rotate(-171deg)`
 })
 
+// Планета соединена с точкой.
+
 const planetThreeThree = document.querySelector('.planet-three-three')
 const liveCaptionBubble = document.querySelector('.live__caption-bubble')
 const line = document.querySelector('.line')

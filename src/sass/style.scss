@@ -6,7 +6,11 @@
 @import 'blocks/about';
 @import 'blocks/planet';
 @import 'blocks/live';
+@import 'blocks/virtual';
 
+body {
+	background-color: #e0e0e0;
+}
 * {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
@@ -27,7 +31,7 @@ a {
 	max-width: 1920px;
 	width: 100%;
 	margin: 0 auto;
-	pad: 0 50px;
+	padding: 0 25px;
 }
 
 .title {
@@ -44,6 +48,13 @@ a {
 	&--live {
 		font-size: 200px;
 	}
+	&--virtual {
+		margin-top: 40px;
+		color: #527aff;
+		font-size: 200px;
+		line-height: 140px; /* 70% */
+		letter-spacing: -4px;
+	}
 }
 .caption {
 	color: #fff;
@@ -57,7 +68,22 @@ a {
 	&--black {
 		color: #000000;
 	}
+	&--blue {
+		color: #5892ff;
+		font-size: 47px;
+		line-height: 40px;
+		letter-spacing: -1.41px;
+		&-r {
+			letter-spacing: -0.51px;
+			margin-top: 45px;
+		}
+	}
 	&--live {
+		letter-spacing: -1.2px;
+	}
+	&--virtual {
+		color: #e0e0e0;
+		line-height: 36px;
 		letter-spacing: -1.2px;
 	}
 }
@@ -87,6 +113,16 @@ a {
 		letter-spacing: -0.4px;
 		dominant-baseline: middle;
 	}
+	&--virtual {
+		margin-top: 60px;
+		color: #e0e0e0;
+		line-height: 40px; /* 100% */
+		letter-spacing: -2.4px;
+		text-transform: capitalize;
+		&-r {
+			margin-top: 80px;
+		}
+	}
 	&--black {
 		color: #000;
 	}
@@ -110,6 +146,18 @@ a {
 		color: #2e2a46;
 		letter-spacing: 0.56px;
 		text-shadow: none;
+	}
+	&--virtual {
+		margin-top: 30px;
+		color: #e0e0e0;
+		letter-spacing: 0.56px;
+		&-r {
+			margin-top: 25px;
+			font-weight: 300;
+			line-height: 38px; /* 114.286% */
+			letter-spacing: 0.38px;
+			text-transform: uppercase;
+		}
 	}
 }
 
