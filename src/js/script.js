@@ -93,10 +93,8 @@ window.addEventListener('scroll', function () {
 
 	// Check if the target section is in the viewport
 	if (rect.top <= windowHeight && rect.bottom >= 0) {
-		// Calculate the scroll percentage within the target section
 		const scrollPercentage =
 			(windowHeight - rect.top) / (windowHeight + rect.height)
-		// Calculate the new top position of the moving block (from 435px to 735px)
 		const newTopPositionForGlass = 435 + 300 * scrollPercentage
 		movingBlock.style.top = `${newTopPositionForGlass}px`
 		const newTopPositionForPole = 330 - 280 * scrollPercentage

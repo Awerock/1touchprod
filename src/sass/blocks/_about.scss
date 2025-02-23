@@ -1,6 +1,6 @@
 .about {
 	min-height: 1045px;
-	background-color: $second-color;
+	background-color: $main-color;
 	background-image: url('../img/bg_abstract.png'); /* Путь к изображению */
 	background-size: cover; /* Растягивает изображение на всю секцию */
 	background-repeat: no-repeat; /* Запрещает повторение */
@@ -54,7 +54,7 @@
 		left: 0;
 		width: 100%; /* Ширина разделителя на всю ширину контейнера */
 		height: 2px; /* Высота разделителя */
-		background-color: #000000;
+		background-color: $black-color;
 	}
 	&__subtitle {
 		flex-direction: column;

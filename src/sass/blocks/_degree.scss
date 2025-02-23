@@ -7,6 +7,7 @@
 	background-size: cover; /* Растягивает изображение на всю секцию */
 	background-repeat: no-repeat;
 	padding-top: 162px;
+	z-index: 1;
 	&__right {
 		position: relative;
 		z-index: 10;
@@ -29,7 +30,7 @@
 	}
 	&__caption {
 		max-width: 253px;
-		color: #e0e0e0;
+		color: $bg-color;
 		font-family: 'TT Interphases Pro Trl';
 		font-size: 57px;
 		font-style: italic;
@@ -51,9 +52,9 @@
 		line-height: 25px; /* 125% */
 		text-transform: uppercase;
 		width: 100%;
-		background-color: #e0e0e0;
+		background-color: $bg-color;
 		margin-top: 20px;
-		outline: solid 20px #e0e0e0;
+		outline: solid 20px $bg-color;
 	}
 	&__bg {
 		position: absolute;
@@ -92,9 +93,9 @@
 	text-align: center;
 	width: 200px;
 	height: 200px;
-	background-color: #c472ed;
+	background-color: $purpure-color;
 	transform: skewX(-10deg);
-	border: solid 1px #e0e0e0;
+	border: solid 1px $bg-color;
 	color: #e0e0e0;
 	font-family: 'TT Interphases Pro Mono Trl';
 	font-size: 25px;
@@ -102,7 +103,7 @@
 	letter-spacing: 0.25px;
 	text-transform: uppercase;
 	&-white {
-		background-color: #e0e0e0;
-		color: #c472ed;
+		background-color: $bg-color;
+		color: $purpure-color;
 	}
 }

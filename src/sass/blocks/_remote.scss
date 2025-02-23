@@ -1,4 +1,67 @@
 .remote {
 	width: 1920px;
-	min-height: 500px;
+	min-height: 2000px;
+	margin: 0 auto;
+	background-image: url('../img/bg_remote.png');
+	background-size: cover; /* Растягивает изображение на всю секцию */
+	background-repeat: no-repeat;
+	padding-top: 360px;
+	transform: translateY(-283.9px);
+	overflow: hidden;
+	&__circle-bg {
+		position: absolute;
+		border-radius: 1492px;
+		background: #8f56e4;
+		width: 1492px;
+		height: 1492px;
+		z-index: -1;
+		top: 423px;
+		left: -200px;
+		&-two {
+			position: absolute;
+			bottom: 0;
+			z-index: 2;
+			width: 1920px;
+		}
+	}
+	&__title {
+		max-width: 1200px;
+		& img {
+			width: 100%;
+		}
+	}
+	&__content {
+		display: flex;
+		gap: 90px;
+		margin-top: 110px;
+		&-img {
+			display: block;
+			max-width: 975px;
+		}
+	}
+	&__subtitle {
+		margin-top: 40px;
+		position: absolute;
+		left: 0;
+		max-width: 750px;
+		width: 100%;
+		max-height: 118px;
+		height: 100%;
+		background-image: url('../img/benefits.svg');
+		background-size: cover; /* Растягивает изображение на всю секцию */
+		background-repeat: no-repeat;
+		color: $bg-color;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 30px; /* 150% */
+		letter-spacing: -0.4px;
+		text-transform: uppercase;
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+		justify-content: center;
+		padding: 30px;
+	}
 }
