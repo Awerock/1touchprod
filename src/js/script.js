@@ -101,3 +101,21 @@ window.addEventListener('scroll', function () {
 		movingPole.style.top = `${newTopPositionForPole}px`
 	}
 })
+
+function randomFloat(min, max) {
+	return Math.random() * (max - min) + min
+}
+
+function animateHex(hex) {
+	const deltaX = randomFloat(0, 7)
+	const deltaY = randomFloat(0, 7)
+
+	hex.style.transform = `translate(${deltaX}px, ${deltaY}px)`
+
+	setTimeout(() => animateHex(hex), randomFloat(200, 400)) // Меняет позицию каждые 2-4 секунды
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	const hexes = document.querySelectorAll('.hex')
+	hexes.forEach(hex => animateHex(hex))
+})

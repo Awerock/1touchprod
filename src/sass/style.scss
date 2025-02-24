@@ -10,6 +10,8 @@
 @import 'blocks/degree';
 @import 'blocks/glasses';
 @import 'blocks/remote';
+@import 'blocks/design';
+@import 'blocks/tech';
 
 body {
 	background-color: #e0e0e0;
@@ -66,6 +68,15 @@ a {
 		position: relative;
 		z-index: 4;
 	}
+	&--design {
+		color: $darkblue-color;
+		font-size: 200px;
+		line-height: 140px; /* 70% */
+		letter-spacing: -9px;
+		position: relative;
+		z-index: 4;
+		margin-top: 50px;
+	}
 }
 .caption {
 	color: $white-color;
@@ -105,6 +116,11 @@ a {
 	}
 	&--viol {
 		color: #66386f;
+	}
+	&--design {
+		color: $black-color;
+		max-width: 618px;
+		letter-spacing: -1.8px;
 	}
 }
 
@@ -156,6 +172,16 @@ a {
 	&--degree {
 		width: fit-content;
 		background-color: $bg-color;
+	}
+	&--design {
+		fill: $bg-color;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 29.5px; /* 147.5% */
+		letter-spacing: -0.4px;
+		align-items: center;
 	}
 }
 
@@ -331,4 +357,88 @@ a {
 	background-color: red;
 	border-radius: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.hex-wrapper {
+	position: absolute;
+	right: 20px;
+	top: 276px;
+	display: block;
+	width: 1080px;
+	height: 952px;
+}
+.hex {
+	width: 273px;
+	height: 273px;
+	position: relative;
+	mask-image: url('../img/mask_hex.svg');
+	mask-size: cover;
+	-webkit-mask-image: url('../img/mask_hex.svg');
+	-webkit-mask-size: cover;
+	overflow: hidden;
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hex1 {
+	position: absolute;
+	top: 37%;
+}
+.hex2 {
+	position: absolute;
+	top: 143px;
+	left: 142px;
+	width: 283px;
+	height: 283px;
+}
+
+.hex3 {
+	position: absolute;
+	top: 76px;
+	left: 393px;
+	width: 360px;
+	height: 360px;
+}
+.hex4 {
+	position: absolute;
+	top: 0px;
+	left: 715px;
+	width: 360px;
+	height: 360px;
+}
+
+.hex5 {
+	position: absolute;
+	top: 360px;
+	left: 242px;
+	width: 360px;
+	height: 360px;
+}
+
+.hex6 {
+	position: absolute;
+	top: 315px;
+	left: 556px;
+	width: 488px;
+	height: 488px;
+}
+
+.hex7 {
+	position: absolute;
+	top: 665px;
+	left: 394px;
+	width: 293px;
+	height: 293px;
+}
+
+.hex-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: grayscale(100%);
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hex:hover .hex-img {
+	transform: scale(1.1);
+	filter: grayscale(0%);
 }
