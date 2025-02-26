@@ -126,3 +126,37 @@ document.querySelectorAll('.features-button').forEach(button => {
 		parentBlock.classList.toggle('open') // Добавляем или удаляем класс 'open'
 	})
 })
+
+function updateTime() {
+	const timeZones = {
+		Dubai: 'Asia/Dubai',
+		Tokyo: 'Asia/Tokyo',
+		Milan: 'Europe/Rome',
+		'New York': 'America/New_York',
+		London: 'Europe/London',
+	}
+
+	document.querySelectorAll('.footer__block').forEach(block => {
+		const caption = block
+			.querySelector('.footer__time-caption')
+			.textContent.trim()
+		const timeElement = block.querySelector('.footer__time')
+
+		if (timeZones[caption]) {
+			const now = new Date()
+			const options = {
+				timeZone: timeZones[caption],
+				hour: '2-digit',
+				minute: '2-digit',
+			}
+			timeElement.textContent = new Intl.DateTimeFormat(
+				'en-GB',
+				options
+			).format(now)
+		}
+	})
+}
+
+// Обновляем время каждую секунду
+setInterval(updateTime, 1000)
+updateTime()
