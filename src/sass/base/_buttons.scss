@@ -13,7 +13,7 @@
 	line-height: normal;
 	border: none;
 	cursor: pointer;
-	outline: 2px solid transparent;
+	outline: 1px solid transparent;
 	outline-offset: 0px;
 	transition: background 0.1s ease-in-out, outline-offset 0.1s ease-in-out,
 		outline-color 0.1s ease-in-out;
@@ -45,6 +45,12 @@
 	cursor: pointer;
 	position: relative; // Важно для псевдоэлемента!
 	z-index: 55;
+	&-last {
+		padding: 20px 95px;
+		width: fit-content;
+		position: absolute;
+		bottom: 100px;
+	}
 	&-remote {
 		margin-top: 440px;
 		padding: 10px 0;

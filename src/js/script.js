@@ -119,3 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	const hexes = document.querySelectorAll('.hex')
 	hexes.forEach(hex => animateHex(hex))
 })
+
+document.querySelectorAll('.features-button').forEach(button => {
+	button.addEventListener('click', () => {
+		const parentBlock = button.closest('.features-block') // находим родительский блок
+		parentBlock.classList.toggle('open') // Добавляем или удаляем класс 'open'
+	})
+})

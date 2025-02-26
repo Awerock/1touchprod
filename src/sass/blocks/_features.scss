@@ -1,0 +1,124 @@
+.features {
+	&-wrapper {
+		margin-top: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 825px;
+		justify-content: space-between;
+		gap: 25px;
+	}
+	&-block {
+		width: 394px;
+		font-family: 'TT Interphases Pro Mono Trl', sans-serif;
+	}
+	&-button {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 64px;
+		padding: 19px 20px;
+		align-items: center;
+		background: $bg-color;
+		border: none;
+		cursor: pointer;
+		transition: background 0.3s ease-in-out;
+		position: relative;
+
+		&:hover {
+			background: $main-color;
+			.features-caption {
+				color: $bg-color;
+			}
+			.features-arrow {
+				filter: brightness(0) saturate(100%) invert(90%) sepia(10%) saturate(0%)
+					hue-rotate(0deg) brightness(100%) contrast(100%);
+			}
+		}
+		.arrow-left,
+		.arrow-right,
+		.arrow-left-bottom,
+		.arrow-right-bottom {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			fill: #e0e0e0; /* Цвет стрелок */
+		}
+
+		.arrow-left {
+			left: -25px;
+			top: -20px;
+		}
+
+		.arrow-right {
+			top: -20px;
+			right: -25px;
+		}
+		.arrow-left-bottom {
+			bottom: -20px;
+			left: -25px;
+		}
+		.arrow-right-bottom {
+			bottom: -20px;
+			right: -25px;
+		}
+	}
+	&-caption {
+		color: $black-color;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 30px; /* 150% */
+		letter-spacing: -0.4px;
+		text-transform: uppercase;
+		transition: color 0.3s ease-in-out;
+	}
+	&-arrow {
+		width: 26px;
+		transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+	}
+}
+
+.features-text {
+	width: 394px;
+	border-bottom: 1px solid rgba(251, 251, 251, 0.2);
+	background: rgba(224, 224, 224, 0.1);
+	min-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+		padding 0.3s ease-in-out;
+
+	color: #fff;
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 135%; /* 24.3px */
+	letter-spacing: -0.36px;
+	max-height: 0; /* Изначально скрыт */
+	opacity: 0; /* Изначально невидим */
+}
+
+.features-block.open .features-text {
+	max-height: 150px;
+	padding: 12px 22px 22px 22px;
+	opacity: 1;
+}
+
+.features-block.open .features-arrow {
+	transform: rotate(180deg);
+}
+
+.features-block.open .features-button {
+	background: $main-color;
+}
+
+.features-block.open .features-caption {
+	color: $bg-color;
+}
+
+.features-block.open .features-arrow {
+	filter: brightness(0) saturate(100%) invert(90%) sepia(10%) saturate(0%)
+		hue-rotate(0deg) brightness(100%) contrast(100%);
+}

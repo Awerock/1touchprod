@@ -4,7 +4,8 @@
 	min-height: 1892px;
 	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1893" viewBox="0 0 1920 1893" fill="none"><path d="M0.378906 140.076C0.378906 140.076 332.379 2.82386 960.379 0.917585C1588.38 -0.988693 1920.38 140.076 1920.38 140.076V1736.58C1920.38 1736.58 1520.38 1892.9 960.379 1892.9C400.379 1892.9 0.378906 1736.58 0.378906 1736.58V140.076Z" fill="%236E4CF8"/></svg>')
 		no-repeat center / cover;
-
+	padding-top: 210px;
+	position: relative;
 	&__shema {
 		width: 672px;
 		height: 672px;
@@ -16,6 +17,7 @@
 		justify-content: center;
 		text-align: center;
 		position: relative;
+		margin: 0 auto;
 		&-text {
 			color: #f94658;
 			font-family: 'TT Interphases Pro Trl';
@@ -24,6 +26,75 @@
 			line-height: 31.701px;
 			letter-spacing: -0.66px;
 			z-index: 2; // Текст поверх вращающихся стрелок
+		}
+		&-img {
+			width: 457.272px;
+			height: 307.901px;
+			background-image: url('../icons/shema2.svg');
+			background-size: contain; /* или cover */
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: background 0.5s ease-in-out;
+			&:hover {
+				background-image: url('../icons/shema1.svg');
+			}
+		}
+	}
+	&__title-block {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		position: relative;
+		z-index: 2;
+	}
+	&__content-block {
+		margin-top: -65px;
+		display: flex;
+		justify-content: space-around;
+	}
+	&__content-left {
+		display: flex;
+		flex-direction: column;
+		max-width: 875px;
+	}
+	&__content-right {
+		max-width: 682px;
+		margin-top: 120px;
+	}
+	&__caption {
+		margin-top: 55px;
+		color: $bg-color;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 57px;
+		font-style: italic;
+		font-weight: 100;
+		line-height: 57px; /* 100% */
+		letter-spacing: -1.71px;
+		text-transform: uppercase;
+	}
+	&__application-blok {
+		margin-top: 35px;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		right: 0;
+	}
+	&__application-item {
+		padding-left: 15px;
+		width: 800px;
+		height: 34px;
+		background: $bg-color;
+		color: $black-color;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 20px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: 34px; /* 170% */
+		letter-spacing: -0.4px;
+		text-transform: uppercase;
+		&--black {
+			background: $black-color;
+			color: $bg-color;
 		}
 	}
 }
