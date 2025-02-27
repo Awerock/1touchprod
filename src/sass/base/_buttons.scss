@@ -16,11 +16,12 @@
 	outline: 1px solid transparent;
 	outline-offset: 0px;
 	transition: background 0.1s ease-in-out, outline-offset 0.1s ease-in-out,
-		outline-color 0.1s ease-in-out;
+		outline-color 0.1s ease-in-out, scale 0.1s ease-in-out;
 	&:hover {
 		background: #db3e4e;
 		outline-color: white; /* Делаем обводку видимой */
 		outline-offset: 5px;
+		scale: 1.05;
 	}
 }
 
@@ -37,7 +38,7 @@
 	font-family: 'TT Interphases Pro Mono Trl';
 	font-size: 16px;
 	font-style: normal;
-	font-weight: 200;
+	font-weight: 400;
 	outline: 20px solid #00000015;
 	outline-offset: 0;
 	animation: breathing-outline 2s infinite ease-in-out;
@@ -45,6 +46,9 @@
 	cursor: pointer;
 	position: relative; // Важно для псевдоэлемента!
 	z-index: 55;
+	&-bottom {
+		font-weight: 700;
+	}
 	&-last {
 		padding: 20px 95px;
 		width: fit-content;

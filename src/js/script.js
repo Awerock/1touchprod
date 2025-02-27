@@ -29,7 +29,7 @@ function shakeBubbles() {
 		bubble.style.transform = `translate(${offsetX}px, ${offsetY}px)`
 	})
 }
-setInterval(shakeBubbles, 100)
+setInterval(shakeBubbles, 200)
 
 // Планета следит за мышкой.
 
@@ -84,6 +84,8 @@ function animate() {
 
 animate()
 
+// Очки ездют.
+
 window.addEventListener('scroll', function () {
 	const targetSection = document.getElementById('degree')
 	const movingBlock = document.getElementById('glasses')
@@ -91,7 +93,6 @@ window.addEventListener('scroll', function () {
 	const rect = targetSection.getBoundingClientRect()
 	const windowHeight = window.innerHeight
 
-	// Check if the target section is in the viewport
 	if (rect.top <= windowHeight && rect.bottom >= 0) {
 		const scrollPercentage =
 			(windowHeight - rect.top) / (windowHeight + rect.height)
@@ -102,7 +103,7 @@ window.addEventListener('scroll', function () {
 	}
 })
 
-function randomFloat(min, max) {
+/* function randomFloat(min, max) {
 	return Math.random() * (max - min) + min
 }
 
@@ -118,14 +119,18 @@ function animateHex(hex) {
 document.addEventListener('DOMContentLoaded', () => {
 	const hexes = document.querySelectorAll('.hex')
 	hexes.forEach(hex => animateHex(hex))
-})
+}) */
+
+// Открывает текст.
 
 document.querySelectorAll('.features-button').forEach(button => {
 	button.addEventListener('click', () => {
-		const parentBlock = button.closest('.features-block') // находим родительский блок
-		parentBlock.classList.toggle('open') // Добавляем или удаляем класс 'open'
+		const parentBlock = button.closest('.features-block')
+		parentBlock.classList.toggle('open')
 	})
 })
+
+// Часы
 
 function updateTime() {
 	const timeZones = {
@@ -137,10 +142,15 @@ function updateTime() {
 	}
 
 	document.querySelectorAll('.footer__block').forEach(block => {
-		const caption = block
-			.querySelector('.footer__time-caption')
-			.textContent.trim()
+		const captionElement = block.querySelector('.footer__time-caption')
 		const timeElement = block.querySelector('.footer__time')
+
+		// Если в этом блоке нет нужных элементов, просто пропускаем его
+		if (!captionElement || !timeElement) {
+			return
+		}
+
+		const caption = captionElement.textContent.trim()
 
 		if (timeZones[caption]) {
 			const now = new Date()
@@ -156,7 +166,29 @@ function updateTime() {
 		}
 	})
 }
+document.addEventListener('DOMContentLoaded', updateTime)
 
-// Обновляем время каждую секунду
-setInterval(updateTime, 1000)
-updateTime()
+// Возвращаемся вверх.
+
+document.getElementById('back-to-top').addEventListener('click', function () {
+	window.scrollTo({ top: 0, behavior: 'smooth' }) // Плавная прокрутка в самый верх
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+	const menuButton = document.getElementById('menuButton')
+	const menu = document.querySelector('.menu')
+
+	menuButton.addEventListener('click', function (event) {
+		event.stopPropagation() // Остановка всплытия события
+		menu.classList.toggle('menu__open')
+		menuButton.classList.toggle('active') // Добавляем/убираем класс активности
+	})
+
+	// Закрытие меню при клике вне него
+	document.addEventListener('click', function (event) {
+		if (!menu.contains(event.target) && !menuButton.contains(event.target)) {
+			menu.classList.remove('menu__open')
+			menuButton.classList.remove('active') // Убираем активный стиль
+		}
+	})
+})

@@ -1,9 +1,8 @@
 .main {
 	min-height: 1007px;
-	background-image: url('../img/bg_header.png'); /* Путь к изображению */
-	background-size: cover; /* Растягивает изображение на всю секцию */
-	background-repeat: no-repeat; /* Запрещает повторение */
-	max-width: 1920px;
+	background-image: url('../img/bg_header.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 	width: 100%;
 	margin: 0 auto;
 	padding-bottom: 145px;
@@ -17,8 +16,8 @@
 	}
 }
 
-@media (max-width: 520px) {
+/* @media (max-width: 520px) {
 	.main {
 		padding-left: 0;
 	}
-}
+} */

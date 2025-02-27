@@ -88,7 +88,7 @@
 
 .degree__chees-item {
 	display: flex;
-	justify-content: center; /* Горизонтальное выравнивание */
+	justify-content: center;
 	align-items: center;
 	text-align: center;
 	width: 200px;
@@ -105,5 +105,15 @@
 	&-white {
 		background-color: $bg-color;
 		color: $purpure-color;
+	}
+	&-other {
+		color: #211d38;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 30px; /* 150% */
+		letter-spacing: -1.2px;
+		text-align: left;
 	}
 }

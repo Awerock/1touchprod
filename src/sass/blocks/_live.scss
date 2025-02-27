@@ -2,8 +2,7 @@
 	min-height: 1491px;
 	background-color: $bg-color;
 	position: relative;
-	max-width: 1920px;
-	margin: 0 auto;
+	width: 100%;
 	overflow: hidden;
 	z-index: -4;
 	&__description-block {
@@ -21,7 +20,6 @@
 		left: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 5px;
 	}
 	&__bubble-block {
 		position: absolute;
@@ -74,7 +72,7 @@
 .line {
 	z-index: 2;
 	position: absolute;
-	height: 2px;
+	height: 1px;
 	background-color: $black-color;
 	transform-origin: left center;
 }
