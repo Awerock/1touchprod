@@ -2,9 +2,17 @@
 	min-height: 1491px;
 	background-color: $bg-color;
 	position: relative;
-	width: 100%;
+	max-width: 1920px;
 	overflow: hidden;
-	z-index: -4;
+	z-index: 0;
+	margin: 0 auto;
+	&__block-wrapper {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
 	&__description-block {
 		position: absolute;
 		top: 177.7px;
@@ -75,4 +83,126 @@
 	height: 1px;
 	background-color: $black-color;
 	transform-origin: left center;
+}
+
+@media (max-width: 1919px) {
+	.live {
+		max-width: 1440px;
+		&__description-block {
+			top: 155.7px;
+			right: 98.4px;
+		}
+		&__bubble-block {
+			width: 900px;
+			top: 576.7px;
+			right: 187.4px;
+		}
+		&__service-block {
+			top: 68%;
+		}
+		&__caption {
+			&-bubble {
+				top: 165%;
+				left: 147%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1439px) {
+	.live {
+		max-width: 1200px;
+		min-height: 1691px;
+		&__description-block {
+			top: 219.7px;
+			right: 35.4px;
+		}
+		&__bubble-block {
+			width: 959px;
+			top: 631.7px;
+			right: 87.4px;
+		}
+		&__caption {
+			&-bubble {
+				top: 158%;
+				left: 135%;
+			}
+		}
+		&__service-block {
+			top: 73%;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.live {
+		max-width: 980px;
+	}
+}
+
+@media (max-width: 979px) {
+	.live {
+		max-width: 710px;
+		min-height: 1358px;
+		&__description-block {
+			max-width: 457px;
+			right: 6.4px;
+			top: 119.7px;
+		}
+		&__bubble-block {
+			width: 695px;
+			top: 415.7px;
+			right: -26.6px;
+		}
+		&__caption {
+			&-bubble {
+				top: 158%;
+				left: 135%;
+			}
+		}
+		&__service-block {
+			top: 863px;
+			left: -143px;
+			width: 100%;
+		}
+		&__svg {
+			width: 713px;
+			height: 42.5px;
+		}
+	}
+}
+
+@media (max-width: 709px) {
+	.live {
+		max-width: 430px;
+		min-height: 1653px;
+		&__block-wrapper {
+			display: flex;
+			left: auto;
+		}
+		&__description-block {
+			width: 330px;
+			left: 0;
+			top: 769px;
+			gap: 15px;
+		}
+		&__bubble-block {
+			width: 663px;
+			top: 278px;
+			right: -120px;
+		}
+		&__caption {
+			&-bubble {
+				display: none;
+			}
+		}
+		&__service-block {
+			top: 1130px;
+			left: -23%;
+		}
+		&__svg {
+			width: 413px;
+			height: 32.5px;
+		}
+	}
 }

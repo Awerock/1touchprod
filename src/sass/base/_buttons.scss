@@ -1,7 +1,6 @@
 .button {
 	width: 328px;
 	height: 52px;
-	flex-shrink: 0;
 	border-radius: 27px;
 	background: $main-color;
 	color: #fff;
@@ -23,9 +22,19 @@
 		outline-offset: 5px;
 		scale: 1.05;
 	}
+	&--black {
+		background: $black-color;
+		&:hover {
+			background: $black-color;
+			outline-color: white; /* Делаем обводку видимой */
+			outline-offset: 5px;
+			scale: 1.05;
+		}
+	}
 }
 
 .button-other {
+	all: unset;
 	margin-top: 250px;
 	display: block;
 	width: 328px;
@@ -46,6 +55,23 @@
 	cursor: pointer;
 	position: relative; // Важно для псевдоэлемента!
 	z-index: 55;
+	align-content: center;
+	&--none {
+		display: none;
+	}
+	&--absolut {
+		position: absolute;
+		bottom: 499px;
+		left: 10%;
+		width: 378px;
+		min-height: 37px;
+		&-none {
+			display: none;
+		}
+		&-tech {
+			bottom: 59px;
+		}
+	}
 	&-bottom {
 		font-weight: 700;
 	}
@@ -80,11 +106,19 @@
 			outline: 1px solid #ffffff;
 		}
 	}
+	&--margin75 {
+		margin-top: 75px;
+	}
 	&--margin130 {
 		margin-top: 130px;
 	}
 	&--margin80 {
 		margin-top: 80px;
+	}
+	&-modal {
+		margin: 0 auto;
+		padding: 20px;
+		margin-top: 125px;
 	}
 }
 
@@ -102,8 +136,142 @@
 	}
 }
 
-@media (max-width: 1540px) {
+@media (max-width: 1919px) {
+	.button-other {
+		&--absolut {
+			bottom: 55px;
+			left: 13%;
+		}
+		&-remote {
+			margin-top: 498px;
+			bottom: 25px;
+		}
+		&-last {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 50px;
+		}
+	}
+}
+
+@media (max-width: 1439px) {
+	.button-other {
+		&--margin130 {
+			display: block;
+			margin-top: 60px;
+		}
+	}
+}
+@media (max-width: 1199px) {
 	.button {
-		width: 228px;
+		max-width: 128px;
+	}
+	.button-other {
+		display: none;
+		&--absolut {
+			display: block;
+			bottom: 70px;
+			left: 31%;
+			margin: 0;
+		}
+		&--margin130 {
+			display: block;
+			margin-top: 60px;
+		}
+	}
+	.button-other-modal {
+		display: block;
+		margin-top: 35px;
+	}
+}
+
+@media (max-width: 979px) {
+	.button-other--margin130 {
+		display: none;
+	}
+	.button--none {
+		display: none;
+	}
+	.button-other--none {
+		width: 100%; /* Ширина кнопки */
+		height: 52px; /* Высота кнопки */
+		border-radius: 27px; /* Скругленные углы */
+		font-size: 16px; /* Размер шрифта */
+		text-align: center; /* Текст по центру */
+		border: none; /* Убираем рамку */
+		cursor: pointer; /* Курсор в виде руки при наведении */
+		display: flex; /* Используем flex для центрирования текста */
+		align-items: center; /* Центрируем по вертикали */
+		justify-content: center;
+		text-align: center;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		padding: 0;
+		z-index: 1;
+	}
+	.button-other--absolut {
+		position: absolute;
+		bottom: 159px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 325px;
+		margin: 0;
+	}
+}
+
+@media (max-width: 709px) {
+	.button-other--none {
+		display: none;
+	}
+	.button-other {
+		all: unset;
+		margin-top: 75px;
+		width: 100%; /* Ширина кнопки */
+		height: 52px; /* Высота кнопки */
+		padding: 0; /* Убираем отступы по бокам */
+		border-radius: 27px; /* Скругленные углы */
+		background: #f94658;
+		color: #fff;
+		text-align: center; /* Текст по центру */
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 16px; /* Размер шрифта */
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		border: none; /* Убираем рамку */
+		cursor: pointer; /* Курсор в виде руки при наведении */
+		align-items: center; /* Центрируем по вертикали */
+		justify-content: center; /* Центрируем по горизонтали */
+		outline: 20px solid #00000015;
+		outline-offset: 0;
+		animation: breathing-outline 2s infinite ease-in-out;
+		transition: background 0.2s ease-in-out;
+		z-index: 55;
+		display: flex;
+		flex-direction: column;
+		&:hover {
+			background: #db3e4e;
+			&::after {
+				all: unset;
+			}
+		}
+		&-remote {
+			display: none;
+		}
+	}
+	.button-other--absolut {
+		position: absolute;
+		bottom: 259px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 325px;
+		margin: 0;
+		&-tech {
+			bottom: 59px;
+		}
 	}
 }

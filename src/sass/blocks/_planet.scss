@@ -126,27 +126,25 @@
 		transform: translate(-50%, -50%) rotate(232deg) translateX(150px);
 	}
 	100% {
-		transform: translate(-50%, -50%) rotate(592deg) translateX(150px); /* 360 + 232 = 592, чтобы вернуться в начальную точку */
+		transform: translate(-50%, -50%) rotate(592deg) translateX(150px);
 	}
 }
 
-/* Анимация для второй планеты с другим стартовым углом */
 @keyframes movePlanet-three-two {
 	0% {
 		transform: translate(-50%, -50%) rotate(317deg) translateX(150px);
 	}
 	100% {
-		transform: translate(-50%, -50%) rotate(677deg) translateX(150px); /* 360 + 317 = 677, чтобы вернуться в начальную точку */
+		transform: translate(-50%, -50%) rotate(677deg) translateX(150px);
 	}
 }
 
-/* Анимация для третьей планеты с еще другим углом */
 @keyframes movePlanet-one {
 	0% {
-		transform: translate(-50%, -50%) rotate(37deg) translateX(85px); /* Начало с другого угла */
+		transform: translate(-50%, -50%) rotate(37deg) translateX(85px);
 	}
 	100% {
-		transform: translate(-50%, -50%) rotate(397deg) translateX(85px); /* 360 + 37 = 397, чтобы вернуться в начальную точку */
+		transform: translate(-50%, -50%) rotate(397deg) translateX(85px);
 	}
 }
 
@@ -171,5 +169,35 @@
 	}
 	100% {
 		transform: translate(-50%, -50%) rotate(145deg) translateX(985px);
+	}
+}
+
+@media (max-width: 1919px) {
+	.planet-wrapper {
+		top: 40.7px;
+		right: 876.4px;
+	}
+}
+
+@media (max-width: 1439px) {
+	.planet-wrapper {
+		right: 766.4px;
+		top: 117.7px;
+	}
+}
+
+@media (max-width: 979px) {
+	.planet-wrapper {
+		right: 506.4px;
+		top: -13.3px;
+		z-index: -1;
+	}
+}
+
+@media (max-width: 709px) {
+	.planet-wrapper {
+		right: 173.4px;
+		top: -85.3px;
+		z-index: -1;
 	}
 }

@@ -1,0 +1,545 @@
+.title {
+	color: $white-color;
+	font-family: 'TT Interphases Pro Trl';
+	font-size: 7.5rem; /* 120px / 16 */
+	font-style: normal;
+	font-weight: 900;
+	line-height: 6.875rem; /* 110px / 16 */
+	letter-spacing: -0.3rem; /* -4.8px / 16 */
+	max-width: 1920px;
+	&--red {
+		color: $main-color;
+	}
+	&--live {
+		font-size: 12.5rem; /* 200px / 16 */
+	}
+	&--virtual {
+		margin-top: 2.5rem; /* 40px / 16 */
+		color: $blue-color;
+		font-size: 12.5rem; /* 200px / 16 */
+		line-height: 8.75rem; /* 140px / 16 */
+		letter-spacing: -0.25rem; /* -4px / 16 */
+	}
+	&--degree {
+		color: $purpure-color;
+		font-size: 12.5rem; /* 200px / 16 */
+		line-height: 8.75rem; /* 140px / 16 */
+		letter-spacing: -0.875rem; /* -14px / 16 */
+		position: relative;
+		z-index: 4;
+	}
+	&--design {
+		color: $darkblue-color;
+		font-size: 12.5rem; /* 200px / 16 */
+		line-height: 8.75rem; /* 140px / 16 */
+		letter-spacing: -0.5625rem; /* -9px / 16 */
+		position: relative;
+		z-index: 4;
+		margin-top: 3.125rem; /* 50px / 16 */
+	}
+	&--tech {
+		color: $bg-color;
+		font-size: 12.5rem; /* 200px / 16 */
+		line-height: 8.75rem; /* 140px / 16 */
+		letter-spacing: -0.75rem; /* -12px / 16 */
+	}
+	&--soccer {
+		text-align: center;
+	}
+}
+
+.caption {
+	color: $white-color;
+	font-family: 'TT Interphases Pro Trl';
+	font-size: 2.5rem; /* 40px / 16 */
+	font-style: normal;
+	font-weight: 800;
+	line-height: 2.5625rem; /* 41px / 16 */
+	letter-spacing: -0.05rem; /* -0.8px / 16 */
+	text-transform: uppercase;
+	&--black {
+		color: $black-color;
+	}
+	&--blue {
+		color: $blue-color;
+		font-size: 2.9375rem; /* 47px / 16 */
+		line-height: 2.5rem; /* 40px / 16 */
+		letter-spacing: -0.088rem; /* -1.41px / 16 */
+		&-r {
+			letter-spacing: 0.031rem; /* 0.49px / 16 */
+			margin-top: 2.8125rem; /* 45px / 16 */
+		}
+	}
+	&--live {
+		letter-spacing: -0.075rem; /* -1.2px / 16 */
+	}
+	&--virtual {
+		color: $bg-color;
+		line-height: 2.25rem; /* 36px / 16 */
+		letter-spacing: -0.075rem; /* -1.2px / 16 */
+	}
+	&--degree {
+		color: $black-color;
+		font-weight: 900;
+		line-height: 2.25rem; /* 36px / 16 */
+		letter-spacing: -0.2125rem; /* -3.4px / 16 */
+	}
+	&--viol {
+		color: #66386f;
+	}
+	&--design {
+		color: $black-color;
+		max-width: 38.625rem; /* 618px / 16 */
+		letter-spacing: -0.1125rem; /* -1.8px / 16 */
+	}
+	&--soccer {
+		text-align: center;
+	}
+}
+
+.subtitle {
+	color: $bg-color;
+	font-family: 'TT Interphases Pro Mono Trl';
+	font-size: 2.5rem; /* 40px / 16 */
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2.5rem; /* 40px / 16 */
+	letter-spacing: -0.1rem; /* -1.6px / 16 */
+	text-transform: capitalize;
+	&--black-mini {
+		color: $black-color;
+		text-transform: capitalize;
+		font-family: 'TT Interphases Pro Mono Trl';
+		font-size: 1.375rem; /* 22px / 16 */
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: -0.11rem; /* -1.76px / 16 */
+	}
+	&--live {
+		fill: #fff;
+		font-size: 1.25rem; /* 20px / 16 */
+		line-height: 1.875rem; /* 30px / 16 */
+		letter-spacing: -0.025rem; /* -0.4px / 16 */
+		dominant-baseline: middle;
+	}
+	&--margin35 {
+		margin-top: 35px; /* 90px / 16 */
+	}
+	&--margin90 {
+		margin-top: 5.625rem; /* 90px / 16 */
+	}
+	&--bottom20 {
+		margin-bottom: 1.25rem; /* 20px / 16 */
+	}
+	&--virtual {
+		margin-top: 3.75rem; /* 60px / 16 */
+		color: $bg-color;
+		line-height: 2.5rem; /* 40px / 16 */
+		letter-spacing: -0.15rem; /* -2.4px / 16 */
+		text-transform: capitalize;
+		&-r {
+			margin-top: 5rem; /* 80px / 16 */
+		}
+	}
+	&-remote {
+		margin-top: 2.5rem; /* 40px / 16 */
+		margin-left: 11.25rem; /* 180px / 16 */
+	}
+	&--black {
+		color: $black-color;
+	}
+	&--margin {
+		margin-left: 11.25rem; /* 180px / 16 */
+	}
+	&--degree {
+		width: fit-content;
+		background-color: $bg-color;
+	}
+	&--design {
+		fill: $bg-color;
+		text-transform: uppercase;
+		font-size: 1.25rem; /* 20px / 16 */
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1.84375rem; /* 29.5px / 16 */
+		letter-spacing: -0.025rem; /* -0.4px / 16 */
+		align-items: center;
+	}
+}
+
+.descrition {
+	color: $white-color;
+	text-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25); /* 4px / 16 */
+	font-family: 'TT Interphases Pro Trl';
+	font-size: 1.75rem; /* 28px / 16 */
+	font-style: normal;
+	font-weight: 200;
+	line-height: 1.875rem; /* 30px / 16 */
+	&-b {
+		font-weight: 400;
+	}
+	&--live {
+		color: $black-color;
+		letter-spacing: 0.035rem; /* 0.56px / 16 */
+		text-shadow: none;
+	}
+	&--virtual {
+		margin-top: 1.875rem; /* 30px / 16 */
+		color: $bg-color;
+		letter-spacing: 0.035rem; /* 0.56px / 16 */
+		&-r {
+			margin-top: 1.5625rem; /* 25px / 16 */
+			font-weight: 300;
+			line-height: 2.375rem; /* 38px / 16 */
+			letter-spacing: 0.0235rem; /* 0.38px / 16 */
+			text-transform: uppercase;
+		}
+	}
+	&-remote {
+		position: absolute;
+		right: 0;
+		display: flex;
+		margin-top: 5rem; /* 80px / 16 */
+		width: 51.6875rem; /* 827px / 16 */
+		height: 10.9375rem; /* 175px / 16 */
+		background: #8f56e4;
+		align-items: center;
+	}
+}
+
+@media (max-width: 1919px) {
+	.title {
+		&--live {
+			font-size: 8rem;
+			font-weight: 900;
+			line-height: 5rem;
+			letter-spacing: -0.18rem;
+		}
+		&--virtual {
+			margin-top: 165px;
+			font-size: 9rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 6.25rem; /* 69.444% */
+			letter-spacing: -0.54rem;
+		}
+		&--degree {
+			font-size: 7.5rem;
+			font-weight: 900;
+			line-height: 6.25rem;
+			letter-spacing: -0.58rem;
+		}
+		&--design {
+			font-size: 10.2rem;
+		}
+	}
+	.subtitle {
+		&-remote {
+			margin-left: 12.65rem;
+		}
+		&--tech {
+			margin-top: 0;
+		}
+		&--virtual {
+			text-align: center;
+		}
+	}
+	.descrition {
+		&-remote {
+			padding: 10px;
+			margin-top: 2rem;
+			width: 585px;
+		}
+	}
+}
+
+@media (max-width: 1439px) {
+	.title {
+		&--virtual {
+			margin-top: 207px;
+		}
+		&--degree {
+			font-size: 6.5rem;
+		}
+		&--design {
+			font-size: 9.5rem;
+			font-weight: 900;
+			line-height: 6.25rem;
+			letter-spacing: -0.58rem;
+		}
+		&--tech {
+			font-size: 144px;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 100px; /* 69.444% */
+			letter-spacing: -8.64px;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.title {
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 6.25rem;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 6.1875rem;
+		letter-spacing: -0.25rem;
+		&--live {
+			font-size: 144px;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 100px; /* 69.444% */
+			letter-spacing: -2.88px;
+			margin-top: -4px;
+		}
+		&--virtual {
+			margin-top: 115px;
+			font-size: 8.8rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 6.25rem; /* 69.444% */
+			letter-spacing: -0.54rem;
+		}
+		&--degree {
+			font-size: 9rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 6.25rem; /* 69.444% */
+			letter-spacing: -0.54rem;
+		}
+		&--design {
+			font-size: 8.25rem;
+		}
+		&--tech {
+			font-size: 144px;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 100px; /* 69.444% */
+			letter-spacing: -8.64px;
+		}
+	}
+	.subtitle {
+		font-size: 2.03rem;
+		font-weight: 400;
+		line-height: 2.03rem;
+		letter-spacing: -0.08125rem;
+		&--live {
+			font-size: 1.25rem; /* 20px / 16 */
+			line-height: 1.875rem; /* 30px / 16 */
+			letter-spacing: -0.025rem; /* -0.4px / 16 */
+			dominant-baseline: middle;
+		}
+		&--virtual {
+			text-align: left;
+			margin-left: 80px;
+			&-r {
+				color: $black-color;
+				font-size: 2.5rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 2.5rem; /* 100% */
+				letter-spacing: -0.15rem;
+				margin: 0;
+				margin-top: 40px;
+			}
+		}
+		&--design {
+			font-size: 1.3rem;
+		}
+	}
+	.caption {
+		&--blue-r {
+			margin-top: 0;
+		}
+		&--degree {
+			font-size: 2.5rem;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 2.25rem; /* 90% */
+			letter-spacing: -0.15rem;
+		}
+		&--design {
+			max-width: 460px;
+		}
+	}
+}
+
+@media (max-width: 979px) {
+	.title {
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 3.75rem;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 4rem;
+		letter-spacing: -0.15rem;
+		&--live {
+			font-size: 4.9375rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 2.6rem;
+			letter-spacing: -0.05875rem;
+		}
+		&--virtual {
+			margin-top: 30px;
+			font-size: 2.9375rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 2.0625rem;
+			letter-spacing: -0.05875rem;
+		}
+		&--design {
+			font-size: 5.25rem;
+		}
+		&--degree {
+			font-size: 7rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 5rem;
+			letter-spacing: -0.54rem;
+		}
+		&--tech {
+			font-size: 7rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 5rem;
+			letter-spacing: -0.54rem;
+		}
+	}
+	.subtitle {
+		&--live {
+			font-size: 1.25rem; /* 20px / 16 */
+			line-height: 1.875rem; /* 30px / 16 */
+			letter-spacing: -0.025rem; /* -0.4px / 16 */
+			dominant-baseline: middle;
+		}
+		&--virtual {
+			margin-left: 0;
+			font-size: 1.4655rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.4655rem;
+			letter-spacing: -0.0879rem;
+		}
+		&--virtual-r {
+			color: $bg-color;
+		}
+		&--tech {
+			text-align: center;
+		}
+	}
+	.descrition {
+		font-size: 1.25rem; /* 20px / 16 */
+		font-style: normal;
+		font-weight: 200;
+		line-height: 1.5rem; /* 24px / 16 */
+		&--virtual {
+			font-size: 1.5rem;
+			font-style: normal;
+			font-weight: 200;
+			line-height: 1.625rem;
+			letter-spacing: 0.03rem;
+			margin-top: 10px;
+		}
+		&-remote {
+			display: flex;
+			position: relative;
+			width: 330px;
+			height: 208.24px;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 200;
+			line-height: 26px; /* 108.333% */
+			letter-spacing: 0.48px;
+		}
+	}
+	.caption {
+		&--virtual {
+			font-size: 1.75rem;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 1.625rem;
+			letter-spacing: -0.0525rem;
+		}
+		&--blue {
+			font-size: 1.95rem;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 1.625rem;
+			letter-spacing: -0.0525rem;
+		}
+		&--black {
+			font-size: 28px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 26px; /* 92.857% */
+			letter-spacing: -0.84px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@media (max-width: 709px) {
+	.title {
+		&--design {
+			font-size: 47px;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 33px; /* 70.213% */
+			letter-spacing: -2.82px;
+		}
+		&--live {
+			font-size: 2.9375rem;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 2rem;
+			letter-spacing: -0.05875rem;
+		}
+		&--tech {
+			font-size: 47px;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 33px; /* 70.213% */
+			letter-spacing: -2.82px;
+		}
+		&--degree {
+			font-size: 47px;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 33px; /* 70.213% */
+			letter-spacing: -2.82px;
+		}
+	}
+	.subtitle {
+		&--tech {
+			margin-top: 20px;
+		}
+		&--live {
+			font-size: 1.25rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 1.147rem;
+		}
+		&--margin {
+			margin-left: 6.25rem;
+		}
+		&-remote {
+			margin-left: 25px;
+		}
+		&--design {
+			font-style: normal;
+			line-height: 18px; /* 150% */
+			letter-spacing: -0.24px;
+			text-transform: uppercase;
+			transform: translate(-170px, 3px);
+		}
+	}
+	.caption {
+		font-size: 1.75rem;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 1.625rem;
+		letter-spacing: -0.035rem;
+	}
+}

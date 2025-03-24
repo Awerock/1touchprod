@@ -4,11 +4,12 @@
 	background-image: url('../img/bg_abstract.png');
 	background-size: cover;
 	background-repeat: no-repeat;
-	width: 100%;
-	padding: 70px 250px;
+	max-width: 1920px;
+	padding: 70px 0;
+	margin: 0 auto;
 	&__wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 	&__left {
 		display: flex;
@@ -16,8 +17,12 @@
 		align-items: flex-end;
 	}
 	&__right {
-		display: flex;
-		gap: 40px;
+		display: grid;
+		grid-template-columns: auto minmax(auto, 618px);
+		grid-template-rows: auto 1fr;
+		gap: 45px;
+		grid-auto-rows: max-content;
+		max-height: 545px;
 	}
 	&__caption-block {
 		display: flex;
@@ -31,150 +36,117 @@
 	}
 	&__globe {
 		margin-top: 71px;
-		position: relative; /* Устанавливаем контейнер с глобусом в качестве относительного */
-		overflow: hidden; /* Скрываем часть изображения, которая выходит за пределы */
-		width: 495px; /* Ширина контейнера */
-		height: 180px; /* Установим высоту контейнера для глобуса */
+		position: relative;
+		overflow: hidden;
+		width: 495px;
+		height: 180px;
 	}
 	&__globe-img {
-		position: absolute; /* Позволяет контролировать положение изображения */
-		top: 20%; /* Сдвигаем изображение вверх, скрывая его верхнюю часть */
-		left: 50%; /* Размещаем изображение по центру */
-		transform: translateX(
-			-50%
-		); /* Сдвигаем изображение на 50% его ширины влево для центрирования */
-		width: 75%; /* Ширина изображения глобуса */
-		height: auto; /* Сохраняем пропорции изображения */
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 75%;
+		height: auto;
 	}
 	&__devider {
-		position: absolute; /* Разделитель также позиционируется относительно контейнера */
-		bottom: 0; /* Размещаем разделитель снизу */
-		left: 0;
-		width: 100%; /* Ширина разделителя на всю ширину контейнера */
-		height: 2px; /* Высота разделителя */
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
 		background-color: $black-color;
 	}
 	&__subtitle {
-		flex-direction: column;
-		display: flex;
-		justify-content: space-between;
-		max-height: 540px;
-		align-items: flex-end;
-		&--margin {
-			margin-top: 35px;
-		}
+		grid-column: 1;
+		grid-row: 1;
 	}
 	&__description {
-		max-width: 620px;
+		grid-column: 2;
+		grid-row: span 2;
+		grid-auto-rows: max-content;
+	}
+	&__arrow {
+		grid-column: 1;
+		grid-row: 2;
+		align-self: flex-end;
+		justify-self: flex-end;
 	}
 	&__partners-wrapper {
 		max-width: 510px;
 		margin-top: 30px;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr); /* 4 элемента на первой строке */
-		grid-gap: 10px; /* Отступы между элементами */
-		justify-items: center; /* Центрирование элементов по горизонтали */
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 10px;
+		justify-items: center;
 		align-items: center;
 	}
 }
 
-/* @media (max-width: 1840px) {
+@media (max-width: 1919px) {
 	.about {
-		padding: 70px 150px;
+		max-width: 1440px;
 	}
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1439px) {
 	.about {
-		padding: 70px 50px;
-	}
-}
-
-@media (max-width: 1450px) {
-	.about {
-		padding: 70px 30px;
+		max-width: 1200px;
+		&__wrapper {
+			gap: 110px;
+		}
 		&__right {
+			display: flex;
 			flex-direction: column;
+			max-height: fit-content;
+			gap: 15px;
 		}
 		&__subtitle {
 			flex-direction: row;
 		}
+		&__arrow {
+			align-self: flex-start;
+		}
 	}
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1199px) {
 	.about {
+		max-width: 980px;
+		&__globe {
+			width: 401px;
+			height: 150px;
+			margin-top: 145px;
+		}
+	}
+}
+
+@media (max-width: 979px) {
+	.about {
+		max-width: 710px;
 		&__wrapper {
-			display: flex;
 			flex-direction: column-reverse;
-			justify-content: space-between;
-			align-items: center;
+			gap: 0px;
 		}
 		&__left {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-		}
-		&__left > :first-child {
-			grid-row: span 3;
-		}
-		&__left > :nth-child(n + 2) {
-			grid-column: 2;
-		}
-		&__right {
-			max-width: 900px;
-		}
-		&__description {
-			max-width: 900px;
+			align-items: center;
 		}
 		&__caption-block {
-			max-width: 420px;
-		}
-	}
-}
-
-@media (max-width: 994px) {
-	.about {
-		&__left {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		&__caption {
-			text-align: center;
-		}
-	}
-}
-
-@media (max-width: 540px) {
-	.about {
-		&__left {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		&__caption {
-			text-align: center;
-			&-block {
-				margin-top: 40px;
-				align-items: center;
-			}
-		}
-		&__partners-wrapper {
-			max-width: 510px;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-gap: 5px;
+			display: none;
 		}
 		&__globe {
-			max-width: 370px;
+			margin-top: 0;
 		}
 	}
 }
 
-@media (max-width: 540px) {
+@media (max-width: 709px) {
 	.about {
+		position: relative;
+		padding: 16px 0;
+		padding-bottom: 245px;
+		max-width: 430px;
 		&__globe {
-			max-width: 300px;
+			width: 100%;
 		}
 	}
-} */
+}

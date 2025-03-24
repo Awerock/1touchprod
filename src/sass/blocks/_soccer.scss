@@ -1,0 +1,113 @@
+.soccer {
+	min-height: 1045px;
+	background-color: $main-color;
+	background-image: url('../img/bg_abstract.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	max-width: 1920px;
+	padding: 240px 0;
+	margin: 0 auto;
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__video {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		margin-top: 35px;
+		width: 1124px;
+		height: 624px;
+		background: linear-gradient(326deg, #2f2f2f, rgba(0, 0, 0, 0.7));
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Четкая черная тень */
+		padding: 30px;
+		border-radius: 25px;
+	}
+	&__yt {
+		margin-top: 20px;
+		width: 100%;
+		height: 100%;
+	}
+	&__poleBlock {
+		margin-top: 20px;
+		width: 70%;
+		position: relative;
+	}
+	&__poleImg {
+		max-width: 100%;
+	}
+	&__camImg {
+		position: absolute;
+		width: 6%;
+		cursor: pointer;
+		&:hover {
+			scale: 110%;
+		}
+		&-vision {
+			border: 3px solid #b50085;
+			border-radius: 50%;
+		}
+		&-center {
+			top: 75%;
+			right: 46%;
+		}
+		&-left {
+			top: 45%;
+			left: 24.5%;
+		}
+		&-right {
+			top: 45%;
+			right: 24%;
+		}
+		&-niz {
+			top: 61%;
+			right: 46%;
+		}
+	}
+}
+
+@media (max-width: 1919px) {
+	.soccer {
+		max-width: 1440px;
+	}
+}
+
+@media (max-width: 1439px) {
+	.soccer {
+		max-width: 1200px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.soccer {
+		max-width: 980px;
+		&__video {
+			width: 700px;
+			height: 424px;
+		}
+	}
+}
+
+@media (max-width: 879px) {
+	.soccer {
+		max-width: 710px;
+		&__video {
+			width: 400px;
+			height: 324px;
+		}
+	}
+}
+
+@media (max-width: 709px) {
+	.soccer {
+		min-height: 821px;
+		padding: 100px 0;
+		max-width: 430px;
+		&__video {
+			width: 350px;
+			height: 224px;
+			padding: 10px;
+		}
+	}
+}

@@ -1,14 +1,40 @@
 .glasses {
 	position: absolute;
 	left: 0;
-	z-index: 2;
+	z-index: 5;
 	top: 435px;
 	transition: top 0.1s ease-out; /* Плавность */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 	&__logo {
 		position: absolute;
 		left: 6%;
-		transform: translateY(42%);
+		top: 21%;
 		z-index: 4;
+		border-radius: 50%;
+		width: 228px;
+		height: 228px;
+		border: 1px solid #c472ed;
+		&-planet {
+			position: absolute;
+			border-radius: 50%;
+			top: 50%;
+			left: 50%;
+			background: #c472ed;
+			width: 18px;
+			height: 18px;
+			transform: translate(-50%, -50%) rotate(37deg) translateX(114px)
+				rotate(-171deg);
+			&-img {
+				width: 116px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
 	}
 	&__text-block {
 		position: absolute;
@@ -30,24 +56,122 @@
 		letter-spacing: -1.6px;
 	}
 	&__main-img {
-		max-width: 100%;
+		width: 2300px;
+		height: auto;
+		max-width: none;
+		max-height: none;
 	}
 	&__pole-img {
 		position: absolute;
 		left: 54%;
 		transform: translate(-50%, -66%);
-		width: 185%;
+		width: 223%;
 		z-index: -1;
+		top: 387.823px;
 		transition: top 0.1s ease-out;
 		&-hidden {
 			position: absolute;
-			top: 114px;
+			top: 155px;
 			left: 50%;
 			transform: translateX(-50%);
 			overflow: hidden;
 			height: 230px;
 			width: 545px;
 			z-index: -1;
+		}
+	}
+}
+
+@media (max-width: 1919px) {
+	.glasses {
+		top: 317.278px;
+		&__pole-img {
+			top: 393.977px;
+		}
+	}
+}
+
+@media (max-width: 1439px) {
+	.glasses {
+		top: 317.278px;
+		&__pole-img {
+			top: 493.977px;
+		}
+	}
+}
+@media (max-width: 1199px) {
+	.glasses {
+		top: 317.278px;
+		&__logo {
+			left: 39%;
+			top: -4%;
+		}
+		&__main-img {
+			width: 1991.835px;
+		}
+		&__text-block {
+			bottom: -57%;
+			right: -18%;
+		}
+	}
+}
+@media (max-width: 979px) {
+	.glasses {
+		top: 217.278px;
+		&__title {
+			font-size: 36px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 34px; /* 94.444% */
+			letter-spacing: -0.72px;
+		}
+		&__text-block {
+			gap: 20px;
+			bottom: -66%;
+			right: 8%;
+		}
+		&__logo {
+			left: 42%;
+			top: -5%;
+			width: 113px;
+			height: 113px;
+			&-planet {
+				transform: translate(-50%, -50%) rotate(37deg) translateX(57px)
+					rotate(-171deg);
+			}
+			&-planet-img {
+				width: 50px;
+			}
+		}
+		&__main-img {
+			width: 942.73px;
+		}
+		&__pole-img-hidden {
+			position: absolute;
+			top: 40px;
+			left: 50%;
+			transform: translateX(-50%);
+			overflow: hidden;
+			height: 119px;
+			width: 318px;
+			z-index: -1;
+		}
+	}
+}
+@media (max-width: 709px) {
+	.glasses {
+		top: 94.105px;
+		&__logo {
+			left: 37%;
+			top: -10%;
+		}
+		&__text-block {
+			gap: 20px;
+			bottom: -66%;
+			right: -23%;
+		}
+		&__pole-img {
+			top: 314.646px;
 		}
 	}
 }

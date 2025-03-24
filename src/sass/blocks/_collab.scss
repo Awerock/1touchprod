@@ -1,0 +1,336 @@
+.collab {
+	border-radius: 30px;
+	background: rgba(46, 42, 70, 0.97);
+	width: 1730px;
+	padding: 44px 0;
+	position: absolute;
+	&__title {
+		margin: 0 auto;
+		max-width: 900px;
+		color: $bg-color;
+		text-align: center;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 36px; /* 90% */
+		letter-spacing: 0.8px;
+		text-transform: uppercase;
+		&-margin25 {
+			margin-top: 25px;
+		}
+	}
+	&__subtitle {
+		margin-top: 25px;
+		color: $bg-color;
+		text-align: center;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 200;
+		line-height: 30px;
+		letter-spacing: 0.6px;
+	}
+	&__option-wrapper {
+		display: flex;
+		gap: 7px;
+		flex-wrap: wrap;
+		margin-top: 35px;
+	}
+	&__option {
+		cursor: pointer;
+		border: 1px solid $bg-color;
+		border-radius: 10px;
+		display: flex;
+		width: 312px;
+		height: 53px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		background-color: $black-color;
+		&:hover {
+			background-color: $main-color;
+		}
+	}
+	&__option-text {
+		cursor: pointer;
+		display: flex;
+		color: #e0e0e0;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 35px;
+		letter-spacing: 0.48px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 10px;
+		&-container {
+			margin: 0 auto;
+			max-width: 1272px;
+		}
+	}
+	&__left {
+		display: flex;
+		flex-direction: column;
+		max-width: 570px;
+	}
+	&__right {
+		display: flex;
+		flex-direction: column;
+		max-width: 570px;
+	}
+	&__caption {
+		margin-top: 25px;
+		color: $bg-color;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 25px; /* 104.167% */
+		letter-spacing: 0.48px;
+	}
+	&__description {
+		color: $bg-color;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 200;
+		line-height: 33px;
+		letter-spacing: 0.48px;
+		&-mini {
+			color: $bg-color;
+			font-family: 'TT Interphases Pro Trl';
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 40px;
+			letter-spacing: 0.52px;
+			margin-top: 25px;
+		}
+	}
+	&__textarea {
+		all: unset;
+		width: 98%;
+		height: 114px;
+		border: 1px solid $bg-color;
+		resize: none;
+		color: $bg-color;
+		font-family: 'TT Interphases Pro Mono Trl' !important;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 23px;
+		letter-spacing: -0.2px;
+		border-radius: 10px;
+		margin-top: 25px;
+		padding: 5px;
+	}
+	&__input {
+		all: unset;
+		width: 100%;
+		height: 35px;
+		border: 1px solid $bg-color;
+		resize: none;
+		color: $bg-color;
+		font-family: 'TT Interphases Pro Mono Trl' !important;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 23px;
+		letter-spacing: -0.2px;
+		border-radius: 10px;
+		margin-top: 10px;
+		padding: 5px;
+	}
+}
+
+.collab__option input {
+	display: none;
+}
+
+.collab__option:has(input:checked) {
+	background-color: $main-color;
+	color: white;
+}
+
+.collab__input.error {
+	border: 2px solid red;
+	background-color: rgba(255, 0, 0, 0.1); /* Красный оттенок */
+}
+
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(24, 28, 41, 0.8);
+	z-index: 9999;
+	overflow: hidden;
+	display: none;
+	&__close {
+		border-radius: 5px;
+		width: 90px;
+		height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 22px;
+		right: 22px;
+		cursor: pointer;
+	}
+	&__line {
+		width: 20px;
+		height: 1px;
+		background-color: $white-color;
+		border-radius: 1px;
+		z-index: 100;
+		transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+		&--r {
+			width: 64px;
+			height: 1px;
+			display: flex;
+			position: absolute;
+			transform: translateY(0) rotate(45deg);
+		}
+		&--l {
+			width: 64px;
+			height: 1px;
+			position: absolute;
+			display: flex;
+			transform: translateY(0) rotate(-45deg);
+		}
+	}
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+}
+
+#modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	overflow: auto;
+}
+@media (max-width: 1919px) {
+	.collab {
+		width: 1400px;
+		top: 10px;
+	}
+}
+
+@media (max-width: 1439px) {
+	.collab {
+		width: 1160px;
+		top: 10px;
+		&__content-container {
+			max-width: 1061px;
+		}
+		&__right {
+			max-width: 500px;
+		}
+		&__left {
+			max-width: 500px;
+		}
+		&__option {
+			width: 260px;
+			&-text {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.collab {
+		top: 10px;
+		width: 940px;
+		&__content-container {
+			max-width: 630px;
+		}
+		&__right {
+			max-width: 100%;
+		}
+		&__left {
+			max-width: 100%;
+		}
+		&__input {
+			width: auto;
+		}
+		&__content {
+			flex-direction: column;
+		}
+		&__option {
+			width: 311px;
+			&-text {
+				font-size: 24px;
+			}
+		}
+	}
+}
+
+@media (max-width: 979px) {
+	.collab {
+		width: 670px;
+	}
+}
+
+@media (max-width: 709px) {
+	.collab {
+		width: 355px;
+		&__title {
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 30px;
+			letter-spacing: 0.4px;
+			text-transform: uppercase;
+		}
+		&__subtitle {
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 200;
+			line-height: 23px; /* 115% */
+			letter-spacing: 0.4px;
+		}
+		&__description {
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 200;
+			line-height: 23px;
+			letter-spacing: 0.4px;
+		}
+		&__textare {
+			font-size: 20px;
+		}
+		&__content-container {
+			max-width: 309px;
+		}
+	}
+	.modal__close {
+		top: 4px;
+		right: 4px;
+	}
+	.modal__line--l {
+		width: 44px;
+	}
+	.modal__line--r {
+		width: 44px;
+	}
+}

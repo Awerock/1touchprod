@@ -123,3 +123,30 @@
 	filter: brightness(0) saturate(100%) invert(90%) sepia(10%) saturate(0%)
 		hue-rotate(0deg) brightness(100%) contrast(100%);
 }
+
+@media (max-width: 979px) {
+	.features-caption {
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 22.291px; /* 159.219% */
+		letter-spacing: -0.28px;
+		text-transform: uppercase;
+	}
+	.features-arrow {
+		width: 19.319px;
+	}
+	.features-button {
+		width: 293px;
+	}
+	.features-wrapper {
+		max-width: 303px;
+		flex-direction: column;
+		margin: 0 auto;
+		margin-top: 25px;
+	}
+	.features-text {
+		width: 293px;
+		font-size: 16px;
+	}
+}
