@@ -17,7 +17,7 @@ document.addEventListener('mousemove', event => {
 	planet.style.transform = `translate(-50%, -50%) rotate(${angleDeg}deg) translateX(110px) rotate(-171deg)`
 })
 
-/* document.addEventListener('mousemove', event => {
+document.addEventListener('mousemove', event => {
 	const planet = document.querySelector('.glasses__logo-planet')
 	const orbit = document.querySelector('.glasses__logo')
 
@@ -49,7 +49,7 @@ document.addEventListener('mousemove', event => {
 	const angleDeg = angle * (180 / Math.PI)
 
 	planet.style.transform = `translate(-50%, -50%) rotate(${angleDeg}deg) translateX(746px) rotate(-171deg)`
-}) */
+})
 
 // Планета соединена с точкой.
 
