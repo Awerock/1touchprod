@@ -15,6 +15,18 @@
 		display: block;
 		margin: 0;
 	}
+	&__profile {
+		display: flex;
+		gap: 5px;
+		align-items: flex-end;
+		&-link {
+			display: block;
+			max-width: 130px;
+		}
+		&-img {
+			width: 100%;
+		}
+	}
 }
 
 @media (max-width: 1919px) {
@@ -32,6 +44,9 @@
 @media (max-width: 1199px) {
 	.main {
 		max-width: 980px;
+		&__profile {
+			display: none;
+		}
 	}
 }
 

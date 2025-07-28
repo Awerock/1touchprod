@@ -42,6 +42,7 @@
 		font-size: 12.5rem; /* 200px / 16 */
 		line-height: 8.75rem; /* 140px / 16 */
 		letter-spacing: -0.75rem; /* -12px / 16 */
+		text-transform: uppercase;
 	}
 	&--soccer {
 		text-align: center;
@@ -210,6 +211,7 @@
 
 @media (max-width: 1919px) {
 	.title {
+		font-size: 7rem;
 		&--live {
 			font-size: 8rem;
 			font-weight: 900;
