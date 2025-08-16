@@ -31,6 +31,26 @@
 			scale: 1.05;
 		}
 	}
+	&-card {
+		margin-top: auto; /* прижимает к низу */
+		width: 100%; /* на всю ширину карточки */
+		text-align: center; /* текст по центру */
+		display: flex; /* для надёжности */
+		align-items: center; /* центр по вертикали */
+		justify-content: center;
+		&--widht460 {
+			max-width: 460px;
+		}
+		&--centr {
+			margin: 0 auto;
+		}
+		&:hover {
+			background: #db3e4e;
+			outline-color: #db4554; /* Делаем обводку видимой */
+			outline-offset: 0;
+			scale: 1;
+		}
+	}
 }
 
 .button-other {

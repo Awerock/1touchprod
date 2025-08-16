@@ -8,7 +8,6 @@
 		display: grid;
 		grid-template-columns: repeat(4, minmax(200px, 1fr)) 160px; /* Первый и последний фиксируем, центр растягиваем */
 		gap: 40px;
-		align-items: center;
 		width: 100%;
 	}
 	&__row2 {
@@ -70,7 +69,7 @@
 	&__contact-description {
 		color: $black-color;
 		font-family: 'TT Interphases Pro Mono Trl';
-		font-size: 20px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: 400;
 		line-height: 26px; /* 130% */

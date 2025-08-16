@@ -44,6 +44,16 @@
 		letter-spacing: -0.75rem; /* -12px / 16 */
 		text-transform: uppercase;
 	}
+	&--our {
+		color: $main-color;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 120px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 110px;
+		letter-spacing: -1.2px;
+		text-align: center;
+	}
 	&--soccer {
 		text-align: center;
 	}
