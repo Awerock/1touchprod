@@ -54,6 +54,13 @@
 		letter-spacing: -1.2px;
 		text-align: center;
 	}
+	&--white {
+		color: $white-color;
+	}
+	&--darkblue {
+		color: $darkblue-color;
+		line-height: 84px;
+	}
 	&--soccer {
 		text-align: center;
 	}
@@ -189,6 +196,12 @@
 	line-height: 1.875rem; /* 30px / 16 */
 	&-b {
 		font-weight: 400;
+	}
+	&--black {
+		color: $black-color;
+	}
+	&--white {
+		color: $white-color;
 	}
 	&--live {
 		color: $black-color;
