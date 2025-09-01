@@ -21,6 +21,8 @@
 @import 'blocks/soccer';
 @import 'blocks/integration';
 @import 'blocks/projects';
+@import 'blocks/project-one';
+@import 'blocks/project-second';
 
 /* @media (max-width: 1920px) {
 	html {
@@ -104,6 +106,15 @@ a {
 	height: 1px;
 	background-color: #6e4cf8;
 }
+
+.maregin-bottom--20 {
+	margin-bottom: 20px;
+}
+
+.margin-left--200 {
+	margin-left: 200px;
+}
+
 @media (max-width: 1199px) {
 	.container {
 		max-width: 1920px;

@@ -232,6 +232,10 @@
 	}
 }
 
+.text-white {
+	color: $white-color;
+}
+
 @media (max-width: 1919px) {
 	.title {
 		font-size: 7rem;
