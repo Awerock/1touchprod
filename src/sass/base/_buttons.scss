@@ -51,6 +51,20 @@
 			scale: 1;
 		}
 	}
+	&-project {
+		width: 100%; /* на всю ширину карточки */
+		text-align: center; /* текст по центру */
+		display: flex; /* для надёжности */
+		align-items: center; /* центр по вертикали */
+		justify-content: center;
+		max-width: 460px;
+		&:hover {
+			background: #db3e4e;
+			outline-color: #db4554; /* Делаем обводку видимой */
+			outline-offset: 0;
+			scale: 1;
+		}
+	}
 }
 
 .button-other {

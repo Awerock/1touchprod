@@ -1,10 +1,10 @@
 @import '../base/variables';
 
-.project-one {
+.project-pg {
 	position: relative;
 	max-width: 1920px;
 	margin: 0 auto;
-	min-height: 2400px;
+	min-height: 2250px;
 	background: url('../img/1_pr.png') no-repeat top center;
 	background-size: auto;
 	padding: 190px 40px 70px 40px;
@@ -62,6 +62,54 @@
 		border-radius: 12px;
 		border: 3px solid $white-color;
 		overflow: hidden;
+	}
+	&__text-block {
+		margin-top: 100px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		gap: 40px;
+	}
+	&__text-columns {
+		display: flex;
+		flex-direction: column;
+		max-width: 485px;
+		gap: 20px;
+	}
+	&__text-title {
+		color: $black-color;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 30px; /* 93.75% */
+		letter-spacing: -0.96px;
+	}
+	&__text-subtitle {
+		color: $black-color;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 200;
+		line-height: 30px; /* 107.143% */
+		letter-spacing: 0.56px;
+	}
+	&__bottom-block {
+		margin-top: 50px;
+		margin-left: 200px;
+		display: flex;
+		flex-direction: row;
+		gap: 50px;
+		align-items: center;
+	}
+	&__caption {
+		color: $black-color;
+		font-family: 'TT Interphases Pro Trl';
+		font-size: 50px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 50px; /* 100% */
+		max-width: 533px;
 	}
 }
 
@@ -161,4 +209,11 @@
 			}
 		}
 	}
+}
+
+.project-second {
+	background: url('../img/2_pr.png') no-repeat top center;
+}
+.project-three {
+	background: url('../img/3_pr.png') no-repeat top center;
 }
