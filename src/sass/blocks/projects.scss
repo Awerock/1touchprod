@@ -63,3 +63,24 @@
 		}
 	}
 }
+
+@media (max-width: 979px) {
+	.projects {
+		width: 710px;
+		&__title {
+		}
+		&__subtitle {
+		}
+	}
+}
+
+@media (max-width: 709px) {
+	.projects {
+		width: 430px;
+		min-height: 2000px;
+		&__title {
+		}
+		&__subtitle {
+		}
+	}
+}

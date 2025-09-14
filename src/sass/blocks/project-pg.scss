@@ -224,6 +224,16 @@
 	background: url('../img/3_pr.png') no-repeat top center;
 }
 
+.projects .project-pg__bottom-block {
+	display: flex;
+	flex-direction: column;
+	margin-left: 0;
+}
+.projects .project-pg__caption {
+	max-width: 1037px;
+	text-align: center;
+}
+
 @media (max-width: 1919px) {
 	.project-pg {
 		width: 1440px;
@@ -237,6 +247,11 @@
 		&__text-columns {
 			max-width: 340px;
 		}
+	}
+	.projects .project-pg__bottom-block {
+		display: flex;
+		flex-direction: column;
+		margin-left: 0;
 	}
 }
 

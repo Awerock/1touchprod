@@ -262,6 +262,9 @@
 		&--design {
 			font-size: 10.2rem;
 		}
+		&--proj {
+			line-height: 5.75rem;
+		}
 	}
 	.subtitle {
 		&-remote {
@@ -315,6 +318,14 @@
 		font-weight: 900;
 		line-height: 6.1875rem;
 		letter-spacing: -0.25rem;
+		&--proj {
+			font-size: 140px;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 100px; /* 69.444% */
+			letter-spacing: -8.64px;
+			text-transform: uppercase;
+		}
 		&--live {
 			font-size: 144px;
 			font-style: normal;
@@ -348,6 +359,9 @@
 			line-height: 100px; /* 69.444% */
 			letter-spacing: -8.64px;
 		}
+	}
+	.title--tech.title--proj {
+		font-size: 140px;
 	}
 	.subtitle {
 		font-size: 2.03rem;
