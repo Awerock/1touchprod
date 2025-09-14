@@ -2,7 +2,7 @@
 
 .project-pg {
 	position: relative;
-	max-width: 1920px;
+	width: 1920px;
 	margin: 0 auto;
 	min-height: 2250px;
 	background: url('../img/1_pr.png') no-repeat top center;
@@ -117,6 +117,12 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
+	&__nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+	}
 	&__back {
 		cursor: pointer;
 		display: flex; /* делаем флекс-контейнер */
@@ -216,4 +222,166 @@
 }
 .project-three {
 	background: url('../img/3_pr.png') no-repeat top center;
+}
+
+@media (max-width: 1919px) {
+	.project-pg {
+		width: 1440px;
+		padding: 190px 35px 70px 35px;
+		&__center-block {
+			margin-top: -55px;
+		}
+		&__player {
+			max-width: 720px;
+		}
+		&__text-columns {
+			max-width: 340px;
+		}
+	}
+}
+
+@media (max-width: 1439px) {
+	.project-pg {
+		max-width: 1200px;
+		padding: 190px 35px 70px 35px;
+		background-position: center calc(0% - 60px);
+		&__servace {
+			margin-left: -190px;
+		}
+		&__center-block {
+			align-items: start;
+			margin-top: 20px;
+		}
+		&__player {
+			margin-top: 60px;
+		}
+		&__text-block {
+			justify-content: space-around;
+		}
+		&__text-columns {
+			max-width: 443px;
+		}
+		&__bottom-block {
+			justify-content: center;
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.project-pg {
+		max-width: 980px;
+		padding: 0;
+		padding-top: 170px;
+		background-position: center calc(0% - 160px);
+		&__servace {
+		}
+		&__center-block {
+		}
+		&__player {
+			margin-top: 50px;
+			max-width: 600px;
+		}
+		&__text-block {
+		}
+		&__text-columns {
+		}
+		&__bottom-block {
+			flex-direction: column;
+		}
+		&__caption {
+			color: #211d38;
+			font-family: 'TT Interphases Pro Trl';
+			font-size: 35px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 40px; /* 114.286% */
+			max-width: 650px;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 979px) {
+	.project-pg {
+		max-width: 710px;
+		background-position: center calc(0% - 160px);
+		padding-top: 120px;
+		&__servace {
+		}
+		&__center-block {
+			flex-direction: column;
+			gap: 20px;
+		}
+		&__player {
+			margin: 0 auto;
+			max-width: fit-content;
+		}
+		&__text-block {
+			margin-top: 50px;
+			flex-direction: column;
+		}
+		&__text-columns {
+			max-width: fit-content;
+		}
+		&__bottom-block {
+		}
+		&__caption {
+			max-width: fit-content;
+		}
+	}
+}
+
+@media (max-width: 709px) {
+	.project-pg {
+		max-width: 430px;
+		padding-bottom: 45px;
+		&__servace {
+		}
+		&__center-block {
+			flex-direction: column-reverse;
+		}
+		&__player {
+		}
+		&__text-block {
+		}
+		&__text-columns {
+		}
+		&__bottom-block {
+		}
+		&__caption {
+			text-align: center;
+		}
+		&__text-subtitle {
+			font-size: 24px;
+			font-weight: 200;
+			line-height: 26px;
+			letter-spacing: 0.48px;
+		}
+		&__text-title {
+			font-size: 28px;
+			font-weight: 500;
+			line-height: 27.387px; /* 97.812% */
+			letter-spacing: -0.84px;
+		}
+		&__top-block {
+			gap: 10px;
+		}
+		&__title {
+			font-size: 60px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 46px;
+			letter-spacing: -4.2px;
+			text-transform: uppercase;
+		}
+	}
+	.sidebar {
+		flex-direction: column;
+		gap: 45px;
+		align-items: flex-start;
+		&__name {
+			margin: 0 auto;
+		}
+	}
 }

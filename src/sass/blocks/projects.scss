@@ -23,5 +23,43 @@
 		font-weight: 300;
 		line-height: 47px; /* 138.235% */
 		text-transform: uppercase;
+		margin-top: 50px;
+	}
+}
+
+@media (max-width: 1919px) {
+	.projects {
+		width: 1440px;
+		min-height: 1230px;
+	}
+}
+
+@media (max-width: 1439px) {
+	.projects {
+		width: 1200px;
+		background-repeat: no-repeat, no-repeat;
+		background-position: center -300px, 50% 2800px;
+		&__subtitle {
+			font-size: 30px;
+			max-width: 1100px;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.projects {
+		width: 980px;
+		padding: 130px 0 0px 0;
+		min-height: 1064px;
+		&__title {
+			width: 100%;
+		}
+		&__subtitle {
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 36px;
+			text-transform: uppercase;
+		}
 	}
 }

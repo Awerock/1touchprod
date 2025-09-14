@@ -6,7 +6,7 @@
 	position: relative;
 	&__row {
 		display: grid;
-		grid-template-columns: repeat(4, minmax(200px, 1fr)) 160px; /* Первый и последний фиксируем, центр растягиваем */
+		grid-template-columns: repeat(4, minmax(200px, 1fr)) 110px; /* Первый и последний фиксируем, центр растягиваем */
 		gap: 40px;
 		width: 100%;
 	}

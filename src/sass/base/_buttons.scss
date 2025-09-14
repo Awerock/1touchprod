@@ -200,6 +200,10 @@
 @media (max-width: 1199px) {
 	.button {
 		max-width: 128px;
+		&-project {
+			width: 460px;
+			max-width: none;
+		}
 	}
 	.button-other {
 		display: none;
@@ -255,6 +259,9 @@
 		width: 325px;
 		margin: 0;
 	}
+	.button.button-card--width460 {
+		max-width: 460px;
+	}
 }
 
 @media (max-width: 709px) {
@@ -307,5 +314,41 @@
 		&-tech {
 			bottom: 59px;
 		}
+	}
+	.button {
+		&-project {
+			width: -webkit-fill-available;
+		}
+	}
+}
+
+.whatsapp-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #25d366; /* фирменный зеленый */
+	color: white;
+	border-radius: 30px;
+	padding: 10px 18px;
+	font-size: 16px;
+	font-family: sans-serif;
+	display: none; /* скрыта по умолчанию */
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+	background-color: #20b955; /* чуть темнее при наведении */
+	transform: scale(1.05);
+}
+
+/* Показывать кнопку только на ширине <=709px */
+@media (max-width: 709px) {
+	.whatsapp-btn {
+		display: inline-flex;
 	}
 }
