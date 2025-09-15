@@ -473,16 +473,172 @@
 
 @media (max-width: 979px) {
 	.integration {
+		width: 710px;
+		background: url(../img/bg_proj.png) no-repeat top center,
+			url(../img/bg_proj2.png) no-repeat 50% 3467px;
 		&__descr {
+		}
+		&__wrapper {
+			min-height: 2146px;
+			max-height: 0;
 		}
 		&__block {
 			flex-direction: column;
 			align-items: center;
 		}
+		&__partners-block {
+			flex-wrap: wrap;
+			gap: 25px;
+			& > :first-child {
+				flex-basis: 100%; /* занимает всю ширину строки */
+				order: -1; /* остаётся первым */
+				text-align: center;
+			}
+		}
 		&__card {
 			&-title {
 			}
 			&-subtitle {
+			}
+			&-big {
+				height: 1040px;
+			}
+			&-footer {
+				flex-direction: column;
+				gap: 10px;
+				&-title {
+					font-size: 23.811px;
+					font-style: normal;
+					font-weight: 900;
+					line-height: 24.172px; /* 101.515% */
+					letter-spacing: -0.952px;
+					text-align: center;
+					width: auto;
+				}
+				&-subtitle {
+					font-size: 15.874px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 16.115px; /* 101.515% */
+					letter-spacing: 0.159px;
+					text-align: center;
+					width: auto;
+					&:nth-child(2) {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 709px) {
+	.integration__round br {
+		display: none;
+	}
+	.title.title--our.margin-top--50 {
+		margin-top: 25px;
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 26px;
+		letter-spacing: -1.4px;
+	}
+	.title.title--our.title--darkblue {
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 26px;
+		letter-spacing: -2.52px;
+	}
+	.descrition.descrition--black.margin-top--50 {
+		margin-top: 25px;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 200;
+		line-height: 20px; /* 100% */
+		letter-spacing: 0.4px;
+		text-align: center;
+	}
+
+	.descrition.descrition--white.margin-top--50 {
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 200;
+		line-height: 20px; /* 100% */
+		letter-spacing: 0.4px;
+		text-align: center;
+		margin-top: 25px;
+	}
+
+	.integration {
+		width: 430px;
+		background: url(../img/bg_proj.png) no-repeat top center,
+			url(../img/bg_proj2.png) no-repeat 50% 3388px;
+		&__round {
+			position: static;
+			width: 328px;
+			height: 54px;
+			border-radius: 32px;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 900;
+			line-height: 15px; /* 100% */
+			letter-spacing: -0.3px;
+			text-transform: uppercase;
+			text-align: center;
+			padding: 10px;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		&__descr {
+		}
+		&__wrapper {
+			margin-top: 25px;
+			min-height: 2250px;
+		}
+		&__partners {
+			margin-top: 0;
+		}
+		&__block {
+		}
+		&__partners-block {
+			& > :first-child {
+			}
+		}
+		&__project {
+			padding-top: 25px;
+		}
+		&__card {
+			max-width: 100%;
+			background-size: auto 130%;
+			&-second:nth-child(1) {
+				background-size: auto 135%;
+			}
+			&-second:nth-child(2) {
+				background-size: auto 135%;
+			}
+			&-second:nth-child(3) {
+				background-size: auto 135%;
+			}
+			&-title {
+			}
+			&-subtitle {
+			}
+			&-big {
+				margin-top: 10px;
+				height: 1100px;
+			}
+			&-post-descr {
+				width: 100%;
+			}
+			&-footer {
+				&-title {
+				}
+				&-subtitle {
+					&:nth-child(2) {
+					}
+				}
 			}
 		}
 	}
